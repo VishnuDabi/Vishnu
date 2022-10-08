@@ -1,0 +1,14 @@
+<script>
+    var n=parseInt(prompt("Enter A Number"));
+    var b=0;
+    while(n>0)
+    {
+        var r=n%10;
+        if(r>b)
+        {
+            b=r;
+        }
+        n=parseInt(n/10);
+    }
+    console.log(b+" is Biggest Unit");
+</script>

@@ -1,0 +1,20 @@
+<script>
+    var n=parseInt(prompt('Enter A Number'));
+    var b=0;
+    var sb=0;
+    while(n>0)
+    {
+        var r=n%10;
+        if(r>b)
+        {
+            b=r;
+        }
+        else if(r>sb)
+        {
+            sb=r;
+        }
+        n=parseInt(n/10);
+    }
+    console.log("Biggest = "+b);
+    console.log("Second biggest = "+sb);
+</script>

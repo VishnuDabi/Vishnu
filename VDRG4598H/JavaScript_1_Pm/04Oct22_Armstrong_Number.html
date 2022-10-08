@@ -1,0 +1,21 @@
+<script>
+    var n=prompt("Enter A Number");
+    var l=n.length;
+    n=parseInt(n);
+    var rev=0;
+    var t=n;
+    while(n>0)
+    {
+        var r=n%10;
+        rev=rev+r**l;
+        n=parseInt(n/10);
+    }
+    if(rev==t)
+    {
+        console.log(t+" is armstrong Number");
+    }
+    else
+    {
+        console.log(t+" is not armstrong Number");
+    }
+</script>

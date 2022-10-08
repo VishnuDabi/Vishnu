@@ -1,0 +1,20 @@
+<script>
+    var n=parseInt(prompt("Enter a Number"));
+    var rev=0;
+    var t=n;
+    while(n>0)
+    {
+        var r=n%10;
+        rev=rev*10+r;
+        n=parseInt(n/10);
+    }
+    console.log("reverse = "+rev);
+    if(t==rev)
+    {
+        console.log(t+" is Palindrome Number")
+    }
+    else
+    {
+        console.log(t+" is not Palindrome Number")
+    }
+</script>

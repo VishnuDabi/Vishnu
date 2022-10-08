@@ -1,0 +1,29 @@
+<script>
+    var s=parseInt(prompt('Start Number'));
+    var e=parseInt(prompt("enter End "))
+    for(var n=s;n<=e;n++)
+    {
+        if(n==0 || n==1)
+        {
+            console.log(n+" Not a prime Number");
+        }
+        else
+        {
+            for(var i=2;i<n;i++)
+            {
+                if(n%i==0)
+                {
+                    break;
+                }
+            }
+            if(n==i)
+            {
+                console.log(n+" is Prime Number");
+            }
+            else
+            {
+                console.log(n+" is Not Prime Number");
+            }
+        }
+    }
+</script>

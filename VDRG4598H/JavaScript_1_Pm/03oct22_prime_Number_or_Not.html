@@ -1,0 +1,26 @@
+<script>
+    var n=parseInt(prompt('Enter a Number'));
+    if(n==0 || n==1)
+    {
+        console.log(n+" is not Prime Number");
+    }
+    else
+    {
+        for(var i=2;i<n;i++)
+        {
+            if(n%i==0)
+            {
+                break;
+            }
+        }
+        if(i==n)
+        {
+            console.log(n+" is prime number");
+        }
+        else
+        {
+            console.log(n+" is Not Prime Number");
+        }
+    }
+    
+</script>
