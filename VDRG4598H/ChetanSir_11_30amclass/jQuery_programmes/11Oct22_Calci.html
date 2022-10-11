@@ -1,0 +1,45 @@
+<script src="jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {  
+        $("#addBtn").click(function()
+        {
+            var FN=parseInt($("#fn").val());
+            var SN=parseInt($("#sn").val());
+            var Result=FN+SN;
+            $("#result").val(Result);
+        })
+        $("#SubBtn").click(function()
+        {
+            var FN=parseInt($("#fn").val());
+            var SN=parseInt($("#sn").val());
+            var Result=FN-SN;
+            $("#result").val(Result);
+        })
+        $("#MulBtn").click(function()
+        {
+            var FN=parseInt($("#fn").val());
+            var SN=parseInt($("#sn").val());
+            var Result=FN*SN;
+            $("#result").val(Result);
+        })
+        $("#DivBtn").click(function()
+        {
+            var FN=parseInt($("#fn").val());
+            var SN=parseInt($("#sn").val());
+            var Result=FN/SN;
+            $("#result").val(Result);
+        })
+
+    })
+</script>
+<body>
+    First Number:- <input type="text" id="fn"><br><br>
+    Second Number:- <input type="text" id="sn"><br><br>
+    <button id="addBtn">+</button>
+    <button id="SubBtn">-</button>
+    <button id="MulBtn">*</button>
+    <button id="DivBtn">/</button><br><br>
+    Result:- <input type="text" id="result"><br><br>
+    
+</body>

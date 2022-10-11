@@ -1,0 +1,21 @@
+<script src="jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {  
+        $("#addBtn").click(function()
+        {
+            var FN=parseInt($("#fn").val());
+            var SN=parseInt($("#sn").val());
+            var Result=FN+SN;
+            $("#result").val(Result);
+        })
+
+    })
+</script>
+<body>
+    First Number:- <input type="text" id="fn"><br><br>
+    Second Number:- <input type="text" id="sn"><br><br>
+    <button id="addBtn">+</button><br><br>
+    Result:- <input type="text" id="result"><br><br>
+    
+</body>

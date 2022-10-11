@@ -1,0 +1,55 @@
+<script src="jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        
+        $("#opr").change(function()
+        {
+            var FN=parseInt($("#fn").val());
+            var SN=parseInt($("#sn").val());
+            var Result;
+            var OPER=$("#opr").val();
+            // alert(OPER)
+            if(OPER=="")
+            {
+                alert("pls Select Operator");
+            }
+            else
+            {
+                if(OPER=="+")
+                {
+                    Result=FN+SN;
+                    $("#result").val(Result);
+                }
+                else if(OPER=="-")
+                {
+                    Result=FN-SN;
+                    $("#result").val(Result);
+                }
+                else if(OPER=="*")
+                {
+                    Result=FN*SN;
+                    $("#result").val(Result);
+                }
+                else
+                {
+                    Result=FN/SN;
+                    $("#result").val(Result);
+                }
+            }
+        })
+
+    })
+</script>
+<body>
+    First Number:- <input type="text" id="fn"><br><br>
+    Second Number:- <input type="text" id="sn"><br><br>
+    Select Operator:- <select id="opr">
+        <option value="">Select Operator</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br><br>
+    Result:- <input type="text" id="result">
+</body>

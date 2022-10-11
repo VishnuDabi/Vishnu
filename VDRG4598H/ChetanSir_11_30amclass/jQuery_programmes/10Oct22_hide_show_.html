@@ -1,0 +1,23 @@
+<script src="./jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $("#hide").click(function()
+        {
+            $("#para").hide();
+            $("#hide").hide();
+            $("#show").show();
+        })
+        $("#show").click(function()
+        {
+            $("#para").show();
+            $("#hide").show();
+            $("#show").hide();
+        })
+    })
+</script>
+<body>
+    <p id="para">hello</p>
+    <button id="hide">Hide</button>
+    <button id="show" style="display: none;">Show</button>
+</body>

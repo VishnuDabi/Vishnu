@@ -1,0 +1,28 @@
+<script>
+    function armstong(n)
+    {
+        var num=n;
+        var s=0;
+        var temp=num;
+        var len=String(num).length;
+        // alert(len);
+        while(num>0)
+        {
+            var rem=num%10;
+            s=s+rem**len;
+            num=parseInt(num/10);
+        }
+        if(temp==s)
+        {
+            console.log(temp+" is armstong number");
+        }
+        else
+        {
+            console.log(temp+" is not armstong number");
+        }
+        console.log(s);
+    }
+    armstong(123);
+    armstong(153);
+    armstong(12);
+</script>

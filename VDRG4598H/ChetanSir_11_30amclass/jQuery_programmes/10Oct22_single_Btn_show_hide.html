@@ -1,0 +1,25 @@
+<script src="./jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $("#show_hide_btn").click(function()
+        {
+            var Btn_name=$("#show_hide_btn").text();
+            alert(Btn_name)
+            if(Btn_name=="Hide")
+            {
+                $("#para").hide();
+                $("#show_hide_btn").text("Show");
+            }
+            if(Btn_name=="Show")
+            {
+                $("#para").show();
+                $("#show_hide_btn").text("Hide");
+            }
+        })
+    })
+</script>
+<body>
+    <p id="para">hello hi</p>
+    <button id="show_hide_btn">Hide</button>
+</body>

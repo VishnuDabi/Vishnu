@@ -1,0 +1,20 @@
+<script src="jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $("#onBtb").click(function()
+        {
+            // alert("run")
+            $("#bulbImg").attr("src","images/yello_bulb.jpg");
+        })
+        $("#offBtn").click(function()
+        {
+            $("#bulbImg").attr("src","images/off_bulb.jpg")
+        })
+    })
+</script>
+<body>
+    <button id="onBtb">ON</button>
+    <img src="images/off_bulb.jpg" id="bulbImg">
+    <button id="offBtn">OFF</button>
+</body>

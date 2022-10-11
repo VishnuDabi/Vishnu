@@ -1,0 +1,17 @@
+<script>
+    function reverse(n)
+    {
+        var num=n;
+        var r=0;
+        // alert(num)
+        while(num>0)
+        {
+            var rem=num%10;
+            // alert(rem)
+            r=r*10+rem;
+            num=parseInt(num/10);
+        }
+        console.log("Reverse of Number is "+r);
+    }
+    reverse(123);
+</script>

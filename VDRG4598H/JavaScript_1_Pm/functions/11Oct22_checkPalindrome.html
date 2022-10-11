@@ -1,0 +1,26 @@
+<script>
+    function reverse(n)
+    {
+        var num=n;
+        var temp=num;
+        var r=0;
+        // alert(num)
+        while(num>0)
+        {
+            var rem=num%10;
+            // alert(rem)
+            r=r*10+rem;
+            num=parseInt(num/10);
+        }
+        if(r==temp)
+        {
+            console.log(temp+" Number is palindrome Number");
+        }
+        else
+        {
+            console.log(temp+" Number is not palindrome Number");
+        }
+    }
+    reverse(123);
+    reverse(121);
+</script>
