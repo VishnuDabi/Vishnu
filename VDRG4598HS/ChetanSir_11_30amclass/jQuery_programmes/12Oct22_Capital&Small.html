@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    <script src="jquery/main_jQuery_link_file.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#uname").keypress(function(e)
+            {
+                var keyCode = e.which;
+                if(keyCode>=97 && keyCode<=122)
+                {
+                    return true;
+                }
+                else
+                {
+                    alert("Only Alphabets are allowed");
+                    return false;
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    Name:- <input type="text" id="uname">
+    
+</body>
+</html>

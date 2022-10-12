@@ -1,0 +1,60 @@
+<head>
+    <style>
+        .orange
+        {
+            color: orange;
+        }
+        .red
+        {
+            color: red;
+        }
+        .blue
+        {
+            color: blue;
+        }
+        .green
+        {
+            color: green;
+        }
+    
+    </style>
+    <script src="jquery/main_jQuery_link_file.js"></script>
+    <script>
+    $(document).ready(function()
+    {
+        $("#pwd").keyup(function()
+        {
+            var len = $("#pwd").val().length;
+            // alert(len);
+            if(len<1)
+            {
+                $("#msg").html("PLEASE ENTER PASSWORD");
+                $("#msg").addClass("orange");
+                $("#msg").removeClass("red");  
+            }
+            else if(len<=4)
+            {
+                $("#msg").html("WEAK");
+                $("#msg").addClass("red");
+                $("#msg").removeClass("blue"); 
+            }
+            else if(len<=8)
+            {
+                $("#msg").html("GOOD");
+                $("#msg").addClass("blue");
+                $("#msg").removeClass("green"); 
+            }
+            else
+            {
+                $("#msg").html("STRONG");
+                $("#msg").addClass("green");
+            }
+        });
+    });
+
+    </script>
+</head>
+
+<body>
+    password:- <input type="password" id="pwd"><span id="msg"></span>
+</body>

@@ -1,0 +1,23 @@
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $("#UName").keyup(function()
+        {
+            var UNAME = $("#UName").val();
+            $("#sameUName").attr("disabled","true")
+            $("#capital").attr("disabled","true");
+            $("#small").attr("disabled","true");
+            $("#sameUName").val(UNAME);
+            $("#capital").val(UNAME.toUpperCase());
+            $("#small").val((UNAME.toLowerCase()));
+        })
+    })
+</script>
+<body>
+    Name:- <input type="text" id="UName"><br><br>
+    Same Name:- <input type="text" id="sameUName"><br><br>
+    Capital Case:- <input type="text" id="capital"><br><br>
+    Small Case:- <input type="text" id="small">
+</body>
