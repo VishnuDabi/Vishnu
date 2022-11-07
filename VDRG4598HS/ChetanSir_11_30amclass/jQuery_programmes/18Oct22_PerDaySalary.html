@@ -1,0 +1,88 @@
+Total Days in Month:- <input type="text" class="ev" id="tdim"><br><br>
+Employee Per Day Salry:- <input type="text" id="epds"><br><br>
+Employee Present Days:- <input type="text" class="ev" id="epd"><br><br>
+Employee Absent Days:- <input type="text" id="ead" readonly><br><br>
+Allow CL Days:- <input type="radio" name="cl-days" id="allow-check-yes" value="yes">Yes
+                <input type="radio" name="cl-days" id="allow-check-no" value="no"> No<br><br>
+<div class="container" style="display: none;">
+    Enter CL Days:- <input type="text" id="clDay"><br><br>
+    Actual Precent Days:- <input type="text" id="apd" readonly><br><br>
+    Actual Absent Days:- <input type="text" id="aad" readonly><br><br>
+</div>
+
+Employee Total Salary:- <input type="text" id="ets" readonly><br><br>
+<script src="jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $(".ev").keyup(function()
+        {
+            var totalDays=parseInt($("#tdim").val());
+            var perDaySalary=parseInt($("#epds").val());
+            var EmployeePresentDays=$("#epd").val();
+            if(EmployeePresentDays<=totalDays)
+            {
+                var EmployeeAbsentDays=totalDays-EmployeePresentDays;
+                $("#ead").val(EmployeeAbsentDays)
+                var EmployeeTotalSalary=perDaySalary*EmployeePresentDays; 
+            }
+            else
+            {
+                alert("Invalid Present Days");
+            }
+            
+        });
+        $("#allow-check-yes").click(function()
+        {
+            $(".container").show();
+            $("#clDay").val("");
+            $("#apd").val("");
+            $("#aad").val("");
+            $("#ets").val("");            
+        });
+        $("#clDay").keyup(function()
+            {
+                $("#ets").val("");
+                var clDay=$("#clDay").val();
+                var EmployeePresentDays=$("#epd").val();
+                var totalDays=parseInt($("#tdim").val());
+                if(EmployeePresentDays<=totalDays)
+                {
+                    var perDaySalary=$("#epds").val();
+                    var EmployeeAbsentDays=totalDays-EmployeePresentDays;
+                    if(clDay<=EmployeeAbsentDays)
+                    {
+                        var actualpresentDay=parseInt(EmployeePresentDays)+parseInt(clDay);
+                        $("#apd").val(actualpresentDay);
+                        var actualAbsentDay=totalDays-actualpresentDay;
+                        $("#aad").val(actualAbsentDay);
+                        var EmployeeTotalSalary=perDaySalary*actualpresentDay; 
+                        $("#ets").val(EmployeeTotalSalary);
+                    }
+                    else
+                    {
+                        alert("Invalid CL Days");
+                    }
+                }
+                else
+                {
+                    alert("Invalid Present Days");
+                }
+                
+
+            });
+        $("#allow-check-no").click(function()
+        {
+            $("#ets").val("");
+            $(".container").hide();
+            var totalDays=$("#tdim").val();
+            var perDaySalary=$("#epds").val();
+            var EmployeePresentDays=$("#epd").val();
+            var EmployeeAbsentDays=totalDays-EmployeePresentDays;
+            $("#ead").val(EmployeeAbsentDays)
+            var EmployeeTotalSalary=perDaySalary*EmployeePresentDays; 
+            $("#ets").val(EmployeeTotalSalary);
+
+        });
+    });
+</script>

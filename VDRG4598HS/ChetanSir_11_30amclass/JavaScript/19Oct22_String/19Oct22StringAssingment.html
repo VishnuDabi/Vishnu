@@ -1,0 +1,58 @@
+<script>
+    var st="nitin";
+    var len=0;
+    var rev="";  
+    for(var i=0;true ;i++)
+    {
+        if(st[i]==undefined)
+        {
+            break;
+        }
+        len++;
+    }
+    document.write("length = "+len+"<br>");
+    for(var i=len-1;i>=0;i--)
+    {
+        var t=st[i];
+        rev=rev+t;
+    }
+    document.write("reverse string = "+rev+"<br>");
+    if(st==rev)
+    {
+        document.write(st+" String is palindrome"+"<br><hr>");
+    }
+    else
+    {
+        document.write(st+" String is not palindrome"+"<br><hr>");
+    } 
+</script>
+<script>
+    var str=prompt("Enter a String");
+    var t=str;
+    var lenCount=0;
+    var reverse="";
+    var arr=str.split(" ");
+    document.write(arr+"<br>");
+    console.log(arr)
+    for(var i=arr.length-1;i>=0;i--)
+    {
+        // alert(arr[i]);
+        // alert(arr[i].length)
+        for(var j=arr[i].length-1;j>=0;j--)
+        {
+            // alert(arr[i][j])
+            var s=(arr[i])[j];
+            reverse=reverse+s;
+        }
+    }
+    document.write("revese = "+ reverse+'<br>');
+    document.write(typeof reverse+"<br>")
+    if(reverse==t)
+    {
+        document.write(st+" String is palindrome"+"<br><hr>");
+    }
+    else
+    {
+        document.write(st+" String is not palindrome"+"<br><hr>");
+    } 
+</script>

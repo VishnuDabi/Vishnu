@@ -1,0 +1,19 @@
+<script>
+    var a=[90,20,10,40,50];
+    var s=a[0];
+    var h=a[0];
+    for(var i of a)
+    {
+        
+        if(i<s)
+        {
+            s=i;
+        }
+        if(i>h)
+        {
+            h=i;
+        }
+    }
+    document.write("Greatest Element of Array = "+h+"<br>");
+    document.write("Smallest Element of Array = "+s+"<br>");
+</script>

@@ -1,0 +1,137 @@
+<script>
+    function parent()
+    {
+        // alert("Enter your choice");
+        var ch=prompt("Enter Your Choice");
+        switch (ch)
+        {
+            case "1":
+                function fact()
+                {
+                    var num=parseInt(prompt("enter a NUm for factorial"));
+                    var f=1;
+                    for(var i=1;i<=num;i++)
+                    {
+                        f=f*i;
+                    }
+                    document.write("Factorial = "+f);
+                }
+                fact();
+                break;
+            case '2':
+                    function fibonacci()
+                    {
+                        var a=1;
+                        var b=0;
+                        var c=0;
+                        var num=prompt("Enter elemenents of Fibonacci Series");
+                        for(var i=1;i<=num;i++)
+                        {
+                            document.write(c+",");
+                            c=a+b;
+                            a=b;
+                            b=c;
+                        }
+                    }
+                    fibonacci();
+                    break;
+                case "3":
+                    function prime()
+                    {
+
+                        var num=parseInt(prompt("Enter A number for Prime or not"));
+                        if(num<2)
+                        {
+                            document.write("invalide Input");
+                        }
+                        else
+                        {
+                            for(var i=2;i<num;i++)
+                            {
+                                if(num%i==0)
+                                {
+                                    break;
+                                }
+                            }
+                            if(i==num)
+                            {
+                                document.write(num+ " is prime number ");
+                            }
+                            else
+                            {
+                                document.write(num+ " is not prime number ");
+                            }
+                        }       
+                    }
+                    prime();
+                    break;
+                case '4':
+                    function armstong()
+                    {
+                        var num=prompt("Enter A number for armstong");
+                        var len=num.length;
+                        var temp=parseInt(num);
+                        var s=0;
+                        while(num>0)
+                        {
+                            var rem=num%10;
+                            s=s+rem**len;
+                            num=parseInt(num/10);
+                        }
+                        if(temp==s)
+                        {
+                            document.write(temp+ " is armstong Number");
+                        }
+                        else
+                        {
+                            document.write(temp+ " is not a armstong Number");
+                        }
+                    }
+                    armstong();
+                    break;
+                case '5':
+                    function palindrome()
+                    {
+                        var num=prompt("Enter A number for palindrome");
+                        var temp=parseInt(num);
+                        var rev=0;
+                        while(num>0)
+                        {
+                            var rem=num%10;
+                            rev=rev*10+rem;
+                            num=parseInt(num/10);
+                        }
+                        if(temp==rev)
+                        {
+                            document.write(temp+" is palindrore Number");
+                        }
+                        else{
+                            document.write(temp+" is not palindrore Number");
+                        }
+                    }
+                    palindrome();
+                    break;
+                case '6':
+                    
+                        function even_odd()
+                        {
+                            var num=prompt("Enter A number for Even-Odd");  
+                            if(num%2==0)
+                            {
+                                document.write(num+" is Even Number ");
+                            }
+                            else
+                            {
+                                document.write(num+" is Odd Number ");
+                            }
+                        }
+                        even_odd();
+                        break;
+                        even_odd();
+            default:
+                document.write("Invalide choice");
+        }
+            
+    }
+    parent();
+</script>

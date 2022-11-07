@@ -1,0 +1,26 @@
+<script>
+    var ar=[2,4,6,5,7,11,19,18,25,14];
+    var n=ar.filter(function(v)
+    {
+        if(v==1 || v==0)
+        {
+            document.write("Not prime")
+        }
+        else
+        {
+            for (var i = 2; i < v; i++)
+            {
+                if(v%i==0)
+                {
+                    break;
+                }
+            }
+            if(i==v)
+            {
+                return v;
+            }
+        }
+    });
+    console.log(n);
+    document.write(n);
+</script>

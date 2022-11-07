@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Main Jquery CDN Start -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Main Jquery CDN End -->
+
+  <!-- Jquery UI Lib  CDN Start -->
+   <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <!-- Jquery UI Lib  CDN End -->
+  <script type="text/javascript">
+  $(document).ready(function()
+  {
+      $("#bounce_btn").click(function()
+      {
+          $("#target").effect("bounce",{times:5},5000);
+      });        
+  });
+  </script>
+</head>
+<body>
+  <button id="bounce_btn">Bounce</button><br><br>
+ <div id="target" style="width: 200px;height: 200px;background-color: red;"></div>
+</body>
+</html>

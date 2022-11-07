@@ -1,0 +1,30 @@
+<script>
+    var a=[];
+    a.push(10);
+    a.push(20);
+    a.push(30);
+    a.push(40);
+    a.push(50);
+    document.write(a+"<br><hr>");
+    a.pop();
+    a.pop();
+    document.write(a+"<br>");
+    a.unshift("Name");
+    a.unshift("lname");
+    document.write(a+"<br>");
+    a.shift();
+    a.shift();
+    document.write(a+"<br><hr>");
+
+
+</script>
+<script>
+    var b=[];
+    var s=parseInt(prompt("Enter Size of Array"));
+    document.write("Enter "+s+" elements"+"<br>")
+    for(var i=0;i<=s-1;i++)
+    {
+        b.push((prompt("Enter Array Element")));
+    }
+    document.write(b);
+</script>

@@ -1,0 +1,40 @@
+<script>
+    var sum=0;
+    var ary=[[1,2,3,4,5,4,2],[4,5,6],[7,8,9]];
+    var a=ary.filter(function(v)
+    {
+        var biggest=0;
+        var b=v.filter(function(vv)
+        {
+            if(biggest<vv)
+            {
+                biggest=vv;
+            }
+            return biggest;
+        });
+        console.log(biggest);
+        sum=sum+biggest;
+    });
+    document.write("sum= "+sum);
+</script>
+<script>
+    var array=[[1,2,3,4,5],[6,7,8],9,2,5];
+    var ar1=array.filter(function(v)
+    {
+        var b=v;
+        if(Array.isArray(array)==true)
+        {
+            alert(v)
+            var ar2=v.filter(function(vv)
+            {
+                return vv;
+            });
+        }
+        else
+        {
+
+            return v;
+        }
+    });
+    document.write(ar1);
+</script>

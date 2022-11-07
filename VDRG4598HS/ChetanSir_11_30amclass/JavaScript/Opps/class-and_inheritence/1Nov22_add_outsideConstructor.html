@@ -1,0 +1,21 @@
+<script>
+    class Js
+    {
+        constructor(a,b)
+        {
+            document.write(a+"<br>");
+            document.write(b+"<br>");
+            this.x=a;
+            this.y=b;
+            document.write("Value of x= "+this.x+"<br>");
+            document.write("Value of y= "+this.y+"<br>");
+        }
+        add()
+        {
+            var r=this.x+this.y;
+            document.write("addition = "+r);
+        }
+    }
+    var v=new Js(10,20);
+    v.add();
+</script>

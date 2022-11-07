@@ -1,0 +1,10 @@
+<h1 id="r"></h1>
+<input type="text" id="i1" placeholder="Enter a Expression">
+<button onclick="show()">Show Result</button>
+<script>
+    function show()
+    {
+        var s=document.getElementById("i1").value;
+        document.getElementById("r").innerHTML=eval(s);
+    }
+</script>

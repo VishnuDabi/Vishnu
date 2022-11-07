@@ -1,0 +1,24 @@
+<script>
+    var array=[[1,2,3,4,5],[6,7,8],9,8,5,4,3];
+    var ar1=array.filter(function(v)
+    {
+        if(Array.isArray(v)==true)
+        {
+            var ar2=v.reduce(function(r,j)
+            {
+                return r+j;
+            });
+            console.log(ar2);
+        }
+        else
+        {
+            alert(v);
+            var res=v.reduce(function(m,l)
+            {
+                return m+l;
+            })
+        }
+        console.log(ar2)
+    });
+    // document.write(ar1);
+</script>

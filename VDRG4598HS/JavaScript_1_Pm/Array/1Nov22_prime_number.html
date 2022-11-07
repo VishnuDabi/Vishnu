@@ -1,0 +1,28 @@
+<script>
+    var a=[3,4,5,7,9,11,15];
+    for(var n of a)
+    {
+        if(n==0 || n==1)
+        {
+            document.write(n+" is not prime"+"<br>");
+        }
+        else
+        {
+            for(var i=2;i<n;i++)
+            {
+                if(n%i==0)
+                {
+                    break;
+                }
+            }
+            if(i==n)
+            {
+                document.write(n+" is prime"+"<br>");
+            }
+            else
+            {
+                document.write(n+" is not prime"+"<br>");
+            }
+        }
+    }
+</script>

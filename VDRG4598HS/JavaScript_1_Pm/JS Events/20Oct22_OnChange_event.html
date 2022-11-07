@@ -1,0 +1,15 @@
+<h1 id="r"></h1>
+<select name="" id="s" onchange="show()">
+    <option value="">-----Select your City-----</option>
+    <option>Indore</option>
+    <option value="Ujjain">Ujjain</option>
+    <option value="Bhopal">Bhopal</option>
+
+</select>
+<script>
+    function show()
+    {
+        var t=document.getElementById("s").value;
+        document.getElementById("r").innerHTML="Welcome to "+t;
+    }
+</script>

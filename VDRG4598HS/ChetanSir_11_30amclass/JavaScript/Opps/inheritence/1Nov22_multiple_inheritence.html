@@ -1,0 +1,26 @@
+<script>
+    class A
+    {
+        funAB()
+        {
+            document.write("FunAB is running");
+        }
+    }
+    class B
+    {
+        funB()
+        {
+            document.write("FunB is running");
+        }
+    }
+    class C extends A
+    {
+        funC()
+        {
+            document.write("Func is running");
+        }
+    }
+    var p=new C();
+    p.funB();
+    p.funAB();
+</script>

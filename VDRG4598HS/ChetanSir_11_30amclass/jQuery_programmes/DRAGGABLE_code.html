@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Main Jquery CDN Start -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Main Jquery CDN End -->
+
+  <!-- Jquery UI Lib  CDN Start -->
+   <script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <!-- Jquery UI Lib  CDN End -->
+  <style>
+         #draggable { width: 150px; height: 150px; padding: 0.5em; background:#eee;}
+      </style>
+  <script type="text/javascript">
+  $(document).ready(function()
+  {  
+    $( "#draggable" ).draggable();     
+  });
+  </script>
+</head>
+<body>
+      <div id = "draggable" class = "ui-widget-content">
+         <p>Drag me !!!</p>
+      </div>
+</body>
+</html>

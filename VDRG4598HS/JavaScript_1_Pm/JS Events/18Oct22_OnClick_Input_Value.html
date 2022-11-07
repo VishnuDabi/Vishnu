@@ -1,0 +1,10 @@
+<h1 id="data"></h1>
+<input type="text" id="name" onkeypress="show()">
+<!-- <button onclick="show()">Show data</button> -->
+<script>
+    function show()
+    {
+        var t=document.getElementById('name').value;
+        document.getElementById("data").innerHTML=t;
+    }
+</script>

@@ -1,0 +1,24 @@
+<script>
+    var a=[];
+    var even=[];
+    var odd=[];
+    var s=parseInt(prompt("Enetr size of array"));
+    for(var i=1;i<=s;i++)
+    {
+        a.push(parseInt(prompt("Enter Array Element")));
+    }
+    document.write("Array = "+a+"<br>");
+    for(var i of a)
+    {
+        if(i%2==0)
+        {
+            even.push(i);
+        }
+        else
+        {
+            odd.push(i);
+        }
+    }
+    document.write("Even Array = "+even+"<br>");
+    document.write("Odd Array = "+odd+"<br>");
+</script>

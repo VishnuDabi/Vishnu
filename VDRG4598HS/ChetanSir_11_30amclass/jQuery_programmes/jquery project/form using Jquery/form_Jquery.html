@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/first.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jQuery/form.js"></script>
+</head>
+<body class="bd">
+    <div class="header">
+        <h1 id="rg">REGISTRATION PAGE</h1>
+    </div>
+    <div class="digi_clock">
+        <h1 id="clock"></h1>
+    </div>
+    <div class="form">
+        <h1 id="timer" class="time">5:00</h1>
+        <form action="submited.html" onsubmit="return validation()">
+            <table border="1px" cellspacing="0px" cellpadding="0px">
+                <tr>
+                    <td>Name:-</td>
+                    <td><input type="text" id="uName" class="validation"></td>
+                    <td id="nameErr"></td>
+                </tr>
+                <tr>
+                    <td>Email:-</td>
+                    <td><input type="email" id="email" class="validation"></td>
+                    <td id="emailErr"></td>
+                </tr>
+                <tr>
+                    <td>Phone:-</td>
+                    <td><input type="text" id="PhoneNumber" class="validation"></td>
+                    <td id="phoneErr"></td>
+                </tr>
+                <tr>
+                    <td>Password:-</td>
+                    <td><input type="password" id="pwd" class="validation"><i class="fa fa-eye-slash" id="eye-slash-btn"></i><i style="display: none;" class="fa fa-eye" id="eye-btn"></i></td>
+                    <td id="pwdErr"></td>
+                </tr>
+                <tr>
+                    <td>Gender:-</td>
+                    <td>
+            
+                        <input type="radio" name="gender" id="male"   class="validation">Male
+                        <input type="radio" name="gender" id="female" class="validation">Female
+                        <input type="radio" name="gender" id="other" class="validation">Others
+                    </td>
+                    <td id="genderErr"></td>
+                </tr>
+                <tr>
+                    <td>Hobby:-</td>
+                    <td>
+                        <input type="checkbox" name="hobbies" class="validation">Cricket
+                        <input type="checkbox" name="hobbies" class="validation">Kho-Kho
+                        <input type="checkbox" name="hobbies" class="validation">Football <br>
+                        <input type="checkbox" name="hobbies" class="validation">
+                        Singging
+                    </td>
+                    <td id="hobbiesErr"></td>
+                </tr>
+                <tr>
+                    <td>City:-</td>
+                    <td>
+                        <select name="" id="city" class="validation">
+                            <option value="">Please Select City</option>
+                            <option value="Indore">Indore</option>
+                            <option value="Ujjain">Ujjain</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Hydrabad">Hydrabad</option>
+                        </select>
+                    </td>
+                    <td id="cityErr"></td>
+                </tr>
+                
+            </table>
+            <!-- <input type="submit" disabled="false" value="Submit" id="btn"> -->
+            <button id="btn" disabled> Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>

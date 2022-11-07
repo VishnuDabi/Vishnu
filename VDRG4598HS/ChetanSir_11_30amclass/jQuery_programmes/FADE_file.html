@@ -1,0 +1,457 @@
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#fadeInBtn").click(function()
+            {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(5000);
+            }); 
+        });
+    </script>    
+</head>
+<body>
+    <button id="fadeInBtn">FadeIn</button>
+    <div id="div1" style="width: 100px;height: 100px;background-color: red;display: none;"></div>
+    <div id="div2" style="width: 100px;height: 100px;background-color: green;display: none;"></div>
+    <div id="div3" style="width: 100px;height: 100px;background-color: blue;display: none;"></div>
+    
+</body>
+</html>
+
+
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#fadeOutBtn").click(function()
+            {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(5000);
+            }); 
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="fadeOutBtn">FadeOut</button>
+    <div id="div1" style="width: 100px;height: 100px;background-color: red;"></div>
+    <div id="div2" style="width: 100px;height: 100px;background-color: green;"></div>
+    <div id="div3" style="width: 100px;height: 100px;background-color: blue;"></div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#fadeToggleBtn").click(function()
+            {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(5000);
+            }); 
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="fadeToggleBtn">FadeToggle</button>
+    <div id="div1" style="width: 100px;height: 100px;background-color: red;"></div>
+    <div id="div2" style="width: 100px;height: 100px;background-color: green;"></div>
+    <div id="div3" style="width: 100px;height: 100px;background-color: blue;"></div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#fadeToBtn").click(function()
+            {
+                $("#div1").fadeTo("slow",0.5);
+                $("#div2").fadeTo("slow",0.9);
+                $("#div3").fadeTo("slow",1.5);
+            }); 
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="fadeToBtn">FadeTo</button>
+    <div id="div1" style="width: 100px;height: 100px;background-color: red;"></div>
+    <div id="div2" style="width: 100px;height: 100px;background-color: green;"></div>
+    <div id="div3" style="width: 100px;height: 100px;background-color: blue;"></div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#slideBtn").click(function()
+            {
+                $("#slideDown").slideDown(9000);
+            });
+        });
+    </script>
+    <style type="text/css">
+        #slideBtn,#slideDown
+        {
+            padding: 5px;
+            background-color: red;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        #slideDown
+        {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideBtn">Slide Down</div>
+    <div id="slideDown">Hello</div>
+    
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#slideBtn").click(function()
+            {
+                $("#slideUp").slideUp(9000);
+            });
+        });
+    </script>
+    <style type="text/css">
+        #slideBtn,#slideUp
+        {
+            padding: 5px;
+            background-color: red;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        #slideUp
+        {
+            padding: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="slideBtn">Slide Up</div>
+    <div id="slideUp">Hello</div>
+    
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#slideBtn").click(function()
+            {
+                $("#slideToggle").slideToggle(9000);
+            });
+        });
+    </script>
+    <style type="text/css">
+        #slideBtn,#slideToggle
+        {
+            padding: 5px;
+            background-color: red;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        #slideToggle
+        {
+            padding: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="slideBtn">Slide Toggle</div>
+    <div id="slideToggle">Hello</div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#start").click(function()
+            {
+                $("#testing").animate(
+                {
+                    left:'300px',
+                    opacity:'0.2',
+                    height:'200px',
+                    width:'200px'
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="start">Start Animation</button>
+    <div id="testing" style="background-color: red;height: 100px;width: 100px;position: absolute;"></div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#start").click(function()
+            {
+                $("#testing").animate(
+                {
+                    left:'300px',
+                    opacity:'0.2',
+                    height:'+=200px',
+                    width:'+=200px'
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="start">Start Animation</button>
+    <div id="testing" style="background-color: red;height: 100px;width: 100px;position: absolute;"></div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#start").click(function()
+            {
+                $("#testing").animate(
+                {
+                    height:'toggle',
+                    width:'toggle'
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="start">Start Animation</button>
+    <div id="testing" style="background-color: red;height: 100px;width: 100px;position: absolute;"></div>
+    
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#start").click(function()
+            {
+                
+                $("#testing").animate({
+                    height:'300px',
+                    opacity:'0.3'
+                },9000);
+                $("#testing").animate({
+                    width:'300px',
+                    opacity:'0.3'
+                },9000);
+                $("#testing").animate({
+                    height:'100px',
+                    opacity:'0.3'
+                },9000);
+                $("#testing").animate({
+                    width:'100px',
+                    opacity:'0.3'
+                },9000);
+
+            });
+        });
+    </script>    
+</head>
+<body>
+    <button id="start">Start Animation</button>
+    <div id="testing" style="background-color: red;height: 100px;width: 100px;position: absolute;"></div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#start").click(function()
+            {
+                var Div=$("#testing");
+                Div.animate({
+                    left:'300px',
+                },9000);
+                Div.animate({
+                    fontSize:'50px',
+                });               
+
+            });
+        });
+    </script>    
+</head>
+<body>
+    <button id="start">Start Animation</button>
+    <div id="testing" style="background-color: red;height: 100px;width: 100px;position: absolute;">
+        Hello
+    </div>    
+</body>
+</html>
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#start").click(function()
+            {
+                var Div=$("#testing");
+                Div.animate({
+                    left:'300px',
+                },9000);
+                Div.animate({
+                    fontSize:'50px',
+                });
+
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <button id="start">Start Animation</button>
+    <div id="testing" style="background-color: red;height: 100px;width: 100px;position: absolute;">
+        Hello
+    </div>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#slideBtn").click(function()
+            {
+                $("#slideToggle").slideToggle(9000);
+            });
+            $("#stop_btn").click(function()
+            {
+                $("#slideToggle").stop();
+            });
+            
+
+        });
+    </script>
+    <style type="text/css">
+        #slideBtn,#slideToggle
+        {
+            padding: 5px;
+            background-color: red;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        #slideToggle
+        {
+            padding: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center><button id="stop_btn">Stop</button> </center>
+    <div id="slideBtn">Slide Toggle</div>
+    <div id="slideToggle">Hello</div>
+    
+</body>
+</html>

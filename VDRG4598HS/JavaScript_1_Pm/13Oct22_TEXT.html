@@ -1,0 +1,280 @@
+<script>
+
+    ////////////////////////////////  Array 1st Program   //////////////////////////////////////
+    var arry=[];
+    for(var i=0;i<5;i++)
+    {
+        var a;
+        arry[i]=prompt("Enter array Element");
+        console.log(arry);
+    }
+    document.write("arry = "+arry+"<br>");
+    console.log(Array.isArray(arry));
+    console.log(typeof arry);
+
+    // *******************************************  Reverse of Array        ***********************************
+    var newArry=[];
+    for(var j=arry.length-1;j>=0;j--)
+    {
+        newArry.push(arry[j]);
+    }
+    document.write("New Array = "+newArry+"<br>");
+
+    // ******************************************   Accending & Deccending      *************************************
+    
+    var a=[10,30,60,8,2];
+    var len=a.length;
+    for(var i=0;i<len;i++)
+    {
+        for(var j=i+1;j<len;j++)
+        {
+            if(a[i]>a[j])  //
+            {
+                // var c=a[i];
+                // a[i]=a[j];
+                // a[j]=c;
+
+                [a[i],a[j]]=[a[j],a[i]];
+            }
+            
+        }
+    }
+    document.write(a+"<br><hr>");
+
+    var b=[40,6,5,78,9,45];
+    var l=b.length;
+    for(var i=0;i<l;i++)
+    {
+        for(var j=i+1;j<l;j++)
+        {
+            if(b[i]<b[j])
+            {
+                var d=b[i];
+                b[i]=b[j];
+                b[j]=d;
+            }
+        }
+        
+    }
+    document.write(b)
+
+        // ******************************************   Prime Number Or Not      *************************************
+
+        var c=[10,3,4,20,7,5,14,17];
+        for(var i=0;i<c.length;i++)
+        {
+            for(var k=2;k<c[i];k++)
+            {
+                // alert(c[i])
+                if(c[i]%k==0)
+                {
+                    document.write(c[i]+" Is Not Prime Number"+"<br>");
+                    break;
+                }
+            }
+            if(k==c[i])
+            {
+                document.write(c[i]+" Is  Prime Number"+"<br>");
+            }
+        }
+        
+
+        //  ******************************************   Highest And Lowest Number      *************************************
+        var d=[50,40,210,20,10,5,8];
+        var fh=0;
+        var sh=0;
+        var fl=9;
+        var sl=9;
+        for(var i=0;i<d.length;i++)
+        {
+            // alert(d[i]);
+            if(d[i]>fh)
+            {
+                fh=d[i];
+            }
+            else if(d[i]>sh)
+            {
+                sh=d[i];
+            }
+            if(d[i]<fl)
+            {
+                fl=d[i];
+            }
+            else if(d[i]<sl)
+            {
+                sl=d[i];
+            }
+        }
+        document.write("first highest = "+fh+"<br>");
+        document.write("Second highest = "+sh+"<br>");
+        document.write("first Lowest = "+fl+"<br>");
+        document.write("second Lowest = "+sl+"<br>");
+
+
+</script>
+<script>
+    ////////////////////////////////  String Program   //////////////////////////////////////
+    
+    // By using "", '', ` `, toString, string(num).
+    
+    var num=123;
+    var str1=String(num);
+    document.write("string 1 = "+str1+"<br>");
+    document.write(typeof str1 +"<br>")
+    var str2="name";
+    document.write("string 2 = "+str2+"<br>");
+    document.write(typeof str2 +"<br>")
+    var str3=toString(num);
+    document.write("string 1 = "+str1+"<br>");
+    document.write(typeof str3 +"<br>")
+    var str4='Names';
+    document.write("string 4 = "+str4+"<br>");
+    document.write(typeof str4 +"<br>");
+
+//     //////////////////////////////////  String Program   //////////////////////////////////////
+
+    var name="Programmers Point";
+    var len=name.length;
+    alert(len)
+    
+    for(var i=len;i<=0;i--)
+    {
+        alert(name[i]);
+        document.write(name[i]);
+    }
+
+    
+</script>
+
+<script>
+    function validation()
+    {
+        var NAME=document.getElementById("uname").value;
+        var Sp=document.getElementById("password").value.length;
+    
+        var result=true;
+        if(NAME=="")
+        {
+            document.getElementById("nameErr").innerHTML="enter Name"
+        }
+
+        if(Sp<=6)
+        {
+            document.getElementById("passErr").innerHTML="enter Name"
+        }
+        
+    }
+</script>
+<body >
+    <form>
+        Name:- <input type="text" id="uname"><span id="nameErr"></span><br><br>
+        Password:- <input type="password" id="pwd"><span id="passErr"></span><br><br>
+        <button onclick="validation()">submit</button>
+    </form>
+</body>
+
+<!-- ****************************************** LOOPS           *********************************** -->
+<script>
+    var m=(prompt("Enter any number"));
+    var rem=0;
+    var t=m;
+    var sum=0;
+    var len=m.length;
+    m=parseInt(m);
+    while(m>0)
+    {
+        var rem=m%10;
+        r=r*10+rem;
+        sum=rem**len+sum;
+        m=parseInt(m/10);
+    }
+    document.write("Rvesre number = "+rem+"<br>");
+    if(rem==t)
+    {
+        document.write(t+" is padindrome Number");
+    }
+    else
+    {
+        document.write(t+" is not padindrome Number");
+    }
+    
+</script>
+
+<script>
+    for(var i=2;i<101;i++)
+    {
+        for(var j=2;j<=100;j++)
+        {
+            if(j%i==0)
+            {
+                document.write(j+" is not prime"+"<br>");
+                break;
+            }
+        }
+        if(i==j)
+        {
+            document.write(j+" is prime"+"<br>");
+
+        }
+    }
+</script>
+<script>
+    var num=5;
+    for(var i=1;i<=num;i++)
+    {
+        for(var j=1;j<=i;j++)
+        {
+            if(!(i==num))
+            {
+                if(j==1||j==i)
+                {
+                    document.write("*");
+                }
+                if(!(j==1||j==i))
+                {
+                    document.write("_");
+                }
+            }
+            if(i==num)
+            {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+
+    
+</script>
+<script>
+    for(var i=1;i<=5;i++)
+    {
+        for(var l=1;l<=5-i;l++)
+        {
+            document.write("_");
+        }
+        for(var j=1;j<=2*i-1;j++)
+        {
+            document.write("*");
+        }
+        // for(var k=i-1;k>=1;k--)
+        // {
+        //     document.write("*");
+        // }
+        document.write("<br>")
+    }
+    for(var i=1;i<=4;i++)
+    {
+        for(var l=1;l<=i;l++)
+        {
+            document.write("_");
+        }
+        for(var j=1;j<=9-i*2;j++)
+        {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+
+
+

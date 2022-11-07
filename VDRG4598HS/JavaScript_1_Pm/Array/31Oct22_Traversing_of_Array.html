@@ -1,0 +1,20 @@
+<script>
+    var a=[];
+    var s=parseInt(prompt("Enter Size of Array"));
+    console.log("Enter "+s+" Elements Of Array");
+    for(var i=0;i<s;i++)
+    {
+        a[i]=parseInt(prompt("Enter Element Of Array"));
+    }
+    console.log(a);
+    console.log("Index Wise Traversing");
+    for(var i=0;i<a.length;i++)
+    {
+        console.log(a[i]);
+    }
+    console.log("Element Wise traversing");
+    for(var i of a)
+    {
+        console.log(i);
+    }
+</script>

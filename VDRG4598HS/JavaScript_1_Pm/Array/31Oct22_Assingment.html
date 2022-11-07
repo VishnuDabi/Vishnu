@@ -1,0 +1,51 @@
+<script>
+    var a=[1,2,3,4,5];
+    var sum=0;
+    var mult=1;
+    var se=0;
+    var so=0;
+    var me=1;
+    var mo=1;
+    var biggest=0;
+    var lowest=9;
+    for(var i of a)
+    {
+        sum=sum+i;
+        mult=mult*i;
+        if(i%2==0)
+        {
+            se=se+i;
+            me=me*i;
+        }
+        else
+        {
+            so=so+i;
+            mo=mo*i;
+        }
+    }
+    console.log("Sum of Array Elements = "+sum);
+    console.log("Multiplication of Array Elements = "+mult);
+    console.log("Sum of Even Array Elements = "+se);
+    console.log("Sum of Odd Array Elements = "+so);
+    console.log("Multiplication of Even Array Elements = "+me);
+    console.log("Multiplication of Odd Array Elements = "+mo);
+
+    for(var i=0;i<a.length;i++)
+    {
+        if(a[i]>biggest)
+        {
+            biggest=a[i];
+        }
+        if(a[i]<lowest)
+        {
+            lowest=a[i];
+        }
+    }
+    console.log("Biggest Element of Array = "+biggest);
+    console.log("Lowest Element of Array = "+lowest);
+    console.log("Traversing Array in Reverse Order");
+    for(var i=a.length-1;i>=0;i--)
+    {
+        console.log(a[i]);
+    }
+</script>

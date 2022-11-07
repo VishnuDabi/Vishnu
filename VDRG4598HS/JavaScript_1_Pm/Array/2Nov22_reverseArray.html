@@ -1,0 +1,16 @@
+<script>
+    var a=[10,50,2,04,80,50,545];
+    for(var i=0;i<a.length;i++)
+    {
+        for(var j=i+1;j<a.length;j++)
+        {
+            if(a[i]<a[j])
+            {
+                var t=a[j];
+                a[j]=a[i];
+                a[i]=t;
+            }
+        }
+    }
+    document.write(a);
+</script>

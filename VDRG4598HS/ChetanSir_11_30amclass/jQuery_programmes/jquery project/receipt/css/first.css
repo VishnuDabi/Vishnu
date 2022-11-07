@@ -1,0 +1,46 @@
+.Main-div
+{
+    height: 600px;
+    width: 650px;
+    background-color: rgba(214, 125, 42, 0.633);
+    align-content: center;
+    margin-left: 30%;
+}
+.heading
+{
+    border: 1px solid;
+    height: 120px;
+    text-align: center;
+}
+.receipt
+{
+    border: 1px solid;
+    text-align: center;
+    height:30px;
+    /* background-color: aqua; */
+}
+#para
+{
+    margin-top: 2px;
+    font-size: 18px;
+}
+#date
+{
+    float: right;
+}
+#stName
+{
+    size: 50px;
+}
+.table-det
+{
+    margin-left: 100px;
+}
+table
+{
+    border: 1px solid black;
+}
+.btn
+{
+    margin-left: 150px;
+}

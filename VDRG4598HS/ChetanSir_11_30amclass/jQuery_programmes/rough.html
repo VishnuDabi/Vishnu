@@ -1,0 +1,12 @@
+<input type="text" id="uname"><br><br>
+<button id="btn" disabled>sunc</button>
+<script src="jquery/main_jQuery_link_file.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $("#uname").keyup(function()
+        {
+            $("#btn").prop("disabled",false);
+        });
+    });
+</script>

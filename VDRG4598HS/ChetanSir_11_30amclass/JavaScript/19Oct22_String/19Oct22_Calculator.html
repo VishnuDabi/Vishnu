@@ -1,0 +1,76 @@
+<style>
+    .cont
+    {
+        height:320px;
+        width: 450px;
+        background-color: darkgray;
+        text-align: center;
+        margin-left: 540px;
+    }
+    button
+    {
+        font-size: 25px;
+        width: 100px;
+    }
+    input
+    {
+        height: 30px;
+        width: 450px;
+        background-color: lightgray;
+        font-size: 25;
+    }
+    input:hover{
+        background-color: rgb(215, 186, 186);
+    }
+    button:hover{
+        background-color: rgb(215, 186, 186);
+    }
+</style>
+<script>
+    function del()
+    {
+
+        var data= document.getElementById('scr').value;
+        var len=data.length;
+        var oData="";
+        for(var i=0;i<=len-2;i++)
+        {
+            var temp=data[i];
+            oData=oData+temp;
+        }
+        document.getElementById("scr").value=oData;
+    }
+    function cal()
+    {
+        var t = document.getElementById("scr").value;
+        var s=eval(t);
+        document.getElementById("scr").value=s;
+    }
+</script>
+<body>
+    <div class="cont">
+        <input type="text" id="scr"><br><br>
+        <button onclick="document.getElementById('scr').value+=9">9</button>
+        <button onclick="document.getElementById('scr').value+=8">8</button>
+        <button onclick="document.getElementById('scr').value+=7">7</button>
+        <button onclick="document.getElementById('scr').value+='+'">+</button><br><br>
+        <button onclick="document.getElementById('scr').value+=6">6</button>
+        <button onclick="document.getElementById('scr').value+=5">5</button>
+        <button onclick="document.getElementById('scr').value+=4">4</button>
+        <button onclick="document.getElementById('scr').value+='-'">-</button><br><br>
+        <button onclick="document.getElementById('scr').value+=3">3</button>
+        <button onclick="document.getElementById('scr').value+=2">2</button>
+        <button onclick="document.getElementById('scr').value+=1">1</button>
+
+        <button onclick="document.getElementById('scr').value+='*'">*</button><br><br>
+        <button onclick="document.getElementById('scr').value+=0">0</button>
+        <button onclick="del()">del</button>
+        <button onclick="document.getElementById('scr').value+='/'">/</button>
+        <button onclick="document.getElementById('scr').value+='.'">.</button><br><br>
+        <button onclick="cal()">=</button>
+        <button onclick="document.getElementById('scr').value=''">CLEAR</button><br><br>
+
+        <br><br>
+    </div>
+
+</body>

@@ -1,0 +1,20 @@
+#time-out-txt
+{
+    color: red;
+    text-align: center;
+}
+span
+{
+    color: yellowgreen;
+}
+#redirect-txt
+{
+    color: rgb(144, 84, 167);
+    text-align: center;
+}
+#sad-image
+{
+    height: 350px;
+    width: 350px;
+    margin-left: 550px;
+}
