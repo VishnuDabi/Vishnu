@@ -1,4 +1,5 @@
 <script>
+    var new_arr=[];
     var array=[[1,2,3,4,5],[6,7,8],9,8,5,4,3];
     var ar1=array.filter(function(v)
     {
@@ -8,17 +9,19 @@
             {
                 return r+j;
             });
+            new_arr.push(ar2);
             console.log(ar2);
         }
         else
         {
-            alert(v);
-            var res=v.reduce(function(m,l)
-            {
-                return m+l;
-            })
+            new_arr.push(v);
         }
-        console.log(ar2)
     });
     // document.write(ar1);
+    console.log(new_arr);
+    var result=new_arr.reduce(function(j,k)
+    {
+        return j+k;
+    });
+    console.log(result)
 </script>

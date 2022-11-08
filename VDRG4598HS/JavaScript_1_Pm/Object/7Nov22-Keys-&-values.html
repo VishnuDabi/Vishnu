@@ -1,0 +1,19 @@
+<script>
+    var s={
+        roll:101,
+        name:'ajay',
+        address:'indore',
+    }
+    console.log(s);
+    s['address']='ujjain';
+    s.name="vikas";
+    console.log(s);
+    for(var i of Object.keys(s))
+    {
+        console.log(i);
+    }
+    for(var j of Object.values(s))
+    {
+        console.log(j);
+    }
+</script>
