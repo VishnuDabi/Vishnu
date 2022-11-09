@@ -1,0 +1,16 @@
+Roll <input type="text" id="roll"><br><br>
+Name:- <input type="text" name="" id="name"><br><br>
+Address: <input type="text" name="" id="address"><br><br>
+<input type="button" value="Show Data" onclick="show()">
+<script>
+    function show()
+    {
+        var obj={
+            roll:document.getElementById('roll').value,
+            name:document.getElementById('name').value,
+            address:document.getElementById('address').value
+        };
+        console.log(obj);
+    }
+    
+</script>
