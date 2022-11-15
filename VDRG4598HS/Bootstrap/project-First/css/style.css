@@ -1,0 +1,82 @@
+.ml-70-per
+{
+    margin-left: 70%;
+}
+.ml-25
+{
+    margin-left: 50px;
+}
+
+.ml-10
+{
+    margin-left: 20px;
+}
+.company-info
+{
+    float: left;
+    width: 65%;
+}
+.login-page
+{
+    float: right;
+    width: 30%;
+}
+.partition-main
+{
+    height: 500px;
+    width: 100%;
+    background-color: bisque;
+}
+.partition-1
+{
+    height: 100%;
+    width: 20%;
+    float: left;
+    /* background-color: blueviolet; */
+}
+.partition-2
+{
+    /* height: 99%; */
+    width: 80%;
+    float: left;
+    background-color: rgb(16, 172, 164);
+}
+.main-images
+{
+    height: 600px;
+    width: 450px;
+    background-color: red;
+}
+/* .text-center
+{
+    text-align: center;
+} */
+.border-1
+{
+    border-radius: 20px;
+    border: 1px solid;
+}
+.images-view
+{
+    height: 200px;
+    width: 150px;
+}
+.images-view:hover
+{
+    transform: scale(1.1);
+}
+.ml-150
+{
+    margin-left: 150px;
+    
+}
+.collapse ul ul
+{
+    display: none;
+}
+.collapse ul li:hover>ul
+{
+    display: block;
+    z-index: -1;
+    line-height: 10px;
+}
