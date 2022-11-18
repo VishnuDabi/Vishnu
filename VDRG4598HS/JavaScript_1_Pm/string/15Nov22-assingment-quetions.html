@@ -1,0 +1,51 @@
+<script>
+    var s='we are Learning java script';
+    var ar=s.split(" ");
+    var new_str="";
+    console.log(ar);
+    for(var i of ar)
+    {
+        for(var j=i.length-1;j>=0;j--)
+        {
+            // console.log(i[j]);
+            new_str=new_str+i[j];
+        }
+        new_str=new_str+" ";
+    }
+    console.log(new_str);
+
+
+    //////////////////////////////////////////////////////////////
+    var s='we are Learning java script';
+    var ar=s.split(" ");
+    var new_str="";
+    console.log(ar);
+    for(var i of ar)
+    {
+        for(var j=0;j<i.length;j++)
+        {
+            if(j==0)
+            {
+                new_str=new_str+i[j].toUpperCase();
+            }
+            else
+            {
+                new_str=new_str+i[j];
+            }
+        }
+        new_str=new_str+" ";
+    }
+    console.log(new_str);
+    
+    //////////////////////////////////////////////////////////////
+
+    // var name='java script';
+    // var br=name.split(" ");
+    // for(var i of br)
+    // {
+    //     for( var j of i)
+    //     {
+            
+    //     }
+    // }
+</script>

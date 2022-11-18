@@ -1,0 +1,128 @@
+<!-- <Script>
+    var ar=[11,22,11];
+    var rev=[];
+    var len=ar.length;
+    var count=0;
+    for( var i of ar)
+    {
+        rev.unshift(i);
+    }
+    console.log("ar array = "+ar);
+    console.log("Revesre array = "+rev);
+    // console.log(ar)
+    // console.log(rev);
+    for(var i=0;i<ar.length;i++)
+    {
+        if(ar[i]==rev[i])
+        {
+            count++;
+        }
+    }
+    if(count==ar.length)
+    {
+        console.log("Array is palindrome");
+    }
+    else
+    {
+        console.log("Array is not palindrome");
+    }
+</Script> -->
+<!-- <script>
+    var ar=[20,50,10,60,40];
+    for(var i=0;i<ar.length;i++)
+    {
+        for(var j=i+1;j<ar.length;j++)
+        {
+            if(ar[i]>ar[j])
+            {
+                var c=ar[i];
+                ar[i]=ar[j];
+                ar[j]=c;
+            }
+        }
+    }
+    console.log(ar);
+</script> -->
+<!-- <script>
+    var ar=[3,5,4,7,9,11,25,23];
+    for(var i of ar)
+    {
+        if(i<2 && i>0)
+        {
+            console.log(i+" Not prime");
+        }
+        else
+        {
+            for(var j=2;j<i;j++)
+            {
+                if(i%j==0)
+                {
+                    break;
+                }
+            }
+            if(i==j)
+            {
+                console.log(i+" number is prime number")
+            }
+            else
+            {
+                console.log(i+" number is not prime number")
+            }
+        }
+    }
+</script> -->
+<!-- <script>
+    var s='hhesxshbvbllo';
+    var t=' ';
+    for(var i=0;i<s.length;i++)
+    {
+        console.log(s.includes(t));
+        var count=1;
+        if(s.includes(t))
+        {
+            // continue;
+            t=' ';
+        }
+        else
+        {
+            if(s[i]==s[i+1])
+            {
+                count++;
+                console.log(s[i]+" : "+count);
+                var t=s[i];
+            }
+            else
+            {
+                console.log(s[i]+" : "+count);
+                s[i]=0;
+            }
+        }
+    }
+</script> -->
+<script>
+    var s=['vishnu','dabi'];
+    var a;
+    var b;
+    var n="";
+    var m="";
+    for(var i=0;i<s.length;i++)
+    {
+        // console.log(s[i].slice(1));
+        for(var j=i+1;j<s.length;j++)
+        {
+            for(var k=0;k<1;k++)
+            {
+                a=s[i][k];
+                b=s[j][k];
+                var x=a;
+                a=b;
+                b=x;
+                alert(a);
+                n=n+a+s.slice(1,s[i].length)+" "; 
+                m=m+b+s.slice(1,s[j].length)+" "; 
+                console.log(n)
+            }
+        }
+    }
+    console.log(n);
+</script>

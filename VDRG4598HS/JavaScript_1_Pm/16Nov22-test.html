@@ -1,0 +1,111 @@
+<!-- <body>
+    <div>
+        <form action="#" onsubmit="GetData()">
+            <label for="uname">Name:-</label>
+            <input type="text" id="uname" placeholder="Enter Name" required><br><br>
+            <label for="lname">Last Name:-</label>
+            <input type="text" id="lname" placeholder="Enter Last Name" required><br><br>
+            <label for="email">Email:-</label>
+            <input type="email" id="email" placeholder="Enter Email " required><br><br>
+            <label for="pwd">Password:-</label>
+            <input type="password" id="pwd" placeholder="Enter Password" required><br><br>
+            <label for="phone">Phone number:-</label>
+            <input type="text" id="phone" placeholder="Enter phone number" required><br><br>
+            <input type="submit" value="Singup">
+        </form>
+    </div>
+</body>
+<script>
+    function GetData()
+    {
+        var uname=document.getElementById('uname').value;
+        var lname=document.getElementById('lname').value;
+        var email=document.getElementById('email').value; 
+        var pwd=document.getElementById('pwd').value;
+        var phone=document.getElementById('phone').value;
+
+        var obj={
+            name:uname,
+            last_name:lname,
+            Email:email,
+            password:pwd,
+            Phone:phone
+        }
+        console.log(obj);
+    }
+</script> -->
+<style>
+    .container
+    {
+        margin-left: 500px;
+        width: 350px;
+        background-color: rgb(209, 189, 184);
+    }
+    input
+    {
+        width: 350px;
+        height: 50px;
+        background-color: rgb(199, 180, 180);
+        color: red;
+        font-size: 25px;
+    }
+    button
+    {
+        height: 50px;
+        width: 84px;
+        color: rgb(16, 154, 192);
+        font-size: 15px;
+        border-radius: 10px;
+        margin-top: 2px;
+    }
+    button:hover
+    {
+        background-color: rgb(185, 158, 158);
+        color: red;
+        transform: scale(1);
+        -webkit-transform:skewX(20deg);
+    }
+</style>
+<body onload="document.getElementById('result').readOnly=true">
+    <div class="container">
+        <input type="text" id="result" placeholder="Enter expression"><br><br>
+        <button onclick="document.getElementById('result').value+=7">7</button>
+        <button onclick="document.getElementById('result').value+=8">8</button>
+        <button onclick="document.getElementById('result').value+=9">9</button>
+        <button onclick="document.getElementById('result').value+='+'">+</button><br>
+        <button onclick="document.getElementById('result').value+=4">4</button>
+        <button onclick="document.getElementById('result').value+=5">5</button>
+        <button onclick="document.getElementById('result').value+=6">6</button>
+        <button onclick="document.getElementById('result').value+='-'">-</button><br>
+        <button onclick="document.getElementById('result').value+=1">1</button>
+        <button onclick="document.getElementById('result').value+=2">2</button>
+        <button onclick="document.getElementById('result').value+=3">3</button>
+        <button onclick="document.getElementById('result').value+='*'">*</button><br>
+        <button onclick="document.getElementById('result').value+=0">0</button>
+        <button onclick="document.getElementById('result').value+='/'">/</button>
+        <button onclick='cal()'>=</button>
+        <button onclick="document.getElementById('result').value+='.'">.</button>
+        <button onclick="del()">del</button>
+        <button onclick="document.getElementById('result').value=''">clear All</button>
+    
+    </div>
+</body>
+<script>
+    function cal()
+    {
+        var data=document.getElementById('result').value;
+        var RESULT=eval(data);
+        document.getElementById('result').value=RESULT;
+    }
+    function del()
+    {
+        var m=document.getElementById('result').value;
+        var len=m.length;
+        var new_data='';
+        for(var i=0;i<len-1;i++)
+        {
+           new_data=new_data+m[i]; 
+        }
+        document.getElementById('result').value=new_data;
+    }
+</script>
