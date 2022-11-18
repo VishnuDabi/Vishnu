@@ -1,4 +1,4 @@
-<!-- <Script>
+<Script>
     var ar=[11,22,11];
     var rev=[];
     var len=ar.length;
@@ -26,8 +26,8 @@
     {
         console.log("Array is not palindrome");
     }
-</Script> -->
-<!-- <script>
+</Script>
+<script>
     var ar=[20,50,10,60,40];
     for(var i=0;i<ar.length;i++)
     {
@@ -42,8 +42,8 @@
         }
     }
     console.log(ar);
-</script> -->
-<!-- <script>
+</script>
+<script>
     var ar=[3,5,4,7,9,11,25,23];
     for(var i of ar)
     {
@@ -70,8 +70,8 @@
             }
         }
     }
-</script> -->
-<!-- <script>
+</script>
+<script>
     var s='hhesxshbvbllo';
     var t=' ';
     for(var i=0;i<s.length;i++)
@@ -98,16 +98,19 @@
             }
         }
     }
-</script> -->
+</script>
 <script>
-    var s=['vishnu','dabi'];
+    var r=prompt("Enter Youe name");
+    var s=r.split(" ");
+    var s1=[];
+    var s2="";
     var a;
     var b;
     var n="";
     var m="";
     for(var i=0;i<s.length;i++)
     {
-        // console.log(s[i].slice(1));
+
         for(var j=i+1;j<s.length;j++)
         {
             for(var k=0;k<1;k++)
@@ -117,12 +120,17 @@
                 var x=a;
                 a=b;
                 b=x;
-                alert(a);
-                n=n+a+s.slice(1,s[i].length)+" "; 
-                m=m+b+s.slice(1,s[j].length)+" "; 
-                console.log(n)
+                // console.log(s[i].slice(1));
+                n=n+a+s[i].slice(1)+" "; 
+                m=m+b+s[j].slice(1)+" "; 
+                // console.log(n)
+                // console.log(m)
+                s2=s2+n+" "+m;
+                s1.push(m);
+                s1.push(n)
             }
         }
     }
-    console.log(n);
+    console.log(s1);
+    console.log(s2);
 </script>
