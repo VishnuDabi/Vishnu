@@ -1,0 +1,112 @@
+<!-- 
+    variable=/regular expression/;
+    ^a start with a
+    a& end with a
+    [a-z] a to z small alphabets
+    [A-Z] a to z capital alphabets
+    [0-9] numbers
+    a+ 1 or more times a may come
+    a* 0 or more times a may come
+    /d represent a digit 
+    /w represent a word
+    (?=.*) atleast one time requires
+    {2,4} minimum 2 chars and maximum 4 chars
+    [%@~] special characters
+
+    examples:- var reg=/^[a-z]+$/;
+ -->
+
+<form action="" >
+    <label for="nm">Name:-</label>
+    <input type="text" name="" id="nm"><br><br> 
+    <label for="pwd">Password:-</label>
+    <input type="password" name="" id="pwd"><input type="checkbox" name="" id="" onclick="pass_val()"><br><br>
+    <label for="pwd1">Re-Password:-</label>
+    <input type="password" name="" id="pwd1"><br><br>
+    <button onclick="return show()">SIGN UP</button>
+</form>
+
+<script>
+    function show()
+    {
+        var nm=document.getElementById("nm").value;
+        var pwd=document.getElementById('pwd').value;
+        var pwd1=document.getElementById('pwd1').value;
+        var password=/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[%$#@!])/
+        var name=/^[a-zA-Z]+$/;
+        var result = true;
+        if(nm=='')
+        {
+            alert("pls enter name");
+            result = false;
+        }
+        else if(!nm.match(name))
+        {
+            alert("Only alphabets");
+            result = false;
+        }
+        else if(!pwd.match(password))
+        {
+            alert("Password must containts 1 small alphbets,1 Capital alphabets and special charecter and minimum 8 charcter and upto 12 characters");
+            result = false;
+        }
+        else if(pwd!=pwd1)
+        {
+            alert("Mismatch password");
+            result = false;
+        }
+        return result;
+    }
+    function pass_val()
+    {
+        var Pass=document.getElementById("pwd");
+        if(Pass.type=='password')
+        {
+            Pass.type='text';
+        }
+        else
+        {
+            Pass.type='password';
+        }
+    }
+</script>
+<!-- <form>
+    Name<input type="text" id="nm" /><br />
+    Password<input type="password" id="pwd" /><input type="checkbox" onclick="vla()" /><br />
+    Re-Password<input type="password" id="pwd1" /><br />
+    <button onclick="return show()">SIGN UP</button>
+</form>
+<script>
+    function show() {
+        var result = true;
+        var p = /^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[%$@])){8,12}/;
+        var nm = document.getElementById("nm").value;
+        var pwd = document.getElementById("pwd").value;
+        var pwd1 = document.getElementById("pwd1").value;
+        var name = /^[a-zA-Z]+$/;
+        if (nm == "") {
+            alert("please enter name");
+            result = false;
+        } else if (!nm.match(name)) {
+            alert("name must contains alphabets only");
+            result = false;
+        } else if (pwd != pwd1) {
+            alert("passwords miss match");
+            result = false;
+        } else if (!pwd.match(p)) {
+            alert(
+                "password must contains atlest 1 upper case 1 lower case 1 special symbol and minimum 8 and maximum 12 charctors"
+            );
+            result = false;
+        }
+        return result;
+    }
+    function vla() {
+        var pwd = document.getElementById("pwd");
+        if (pwd.type == "password") {
+            pwd.type = "text";
+        } else {
+            pwd.type = "password";
+        }
+    }
+</script> -->
