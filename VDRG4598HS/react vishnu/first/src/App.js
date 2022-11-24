@@ -40,22 +40,74 @@ import React, {useState} from "react";
   //    </>
   //     )
   //   }
-        {/* 12 Nov 22 */}
+        /*  12 Nov 22 */
+
+// const App=()=>{
+//   // var n=5;                       /* default value given in useState so comment this line */
+//   var [n,updatevalue]=useState(5);  /*  5 in useState is default value of n*/
+//   const Change=(e)=>{
+//     updatevalue(e.target.value);
+//     // console.log(e.target.name);
+//     // console.log(e.target.value);
+//     // console.log(e.target.type);
+//     updatevalue(n+=1);
+//   }
+//   return(
+//     <>
+//       <h1>App component is running</h1>
+//       <h2>Value is {n}</h2>
+//       <button onClick={Change}>Increase</button>
+//     </>
+//   )
+// }
+
+// 15 Nov 22  first way
+// const App=()=>{
+//   let [name,updatename]=useState();
+//   let [email,updateemail]=useState();
+//   let [pwd,updatepwd]=useState();
+//   const Change=(e)=>{
+//     updatename(e.target.value);
+//   }
+//   return(
+//     <>
+//       <h1>App component is running</h1>
+//       <h2>{name} {email} {pwd} </h2>
+//       Name<input type='text' name="name" value={name} onChange={Change}/><br/>
+//       Email<input type='email' name="email" value={email} onChange={Change}/>
+//       password<input type='password' name="pwd" value={pwd} onChange={Change}/>
+
+//     </>
+//   )
+// }
+
+// 2nd way
 const App=()=>{
-  // var n=5;
-  var [n,updatevalue]=useState(5);
+  let [name,updatename]=useState();
+  let [email,updateemail]=useState();
+  let [pwd,updatepwd]=useState();
   const Change=(e)=>{
-    updatevalue(e.target.value);
-    console.log(e.target.name);
-    console.log(e.target.value);
-    console.log(e.target.type);
-    // updatevalue(n+1);
+    if(e.target.value==="name")
+    {
+      updatename(e.target.value);
+    }
+    else if(e.target.value==='email')
+    {
+      updateemail(e.target.value);
+    }
+    else
+    {
+      updatepwd(e.target.value);
+    }
   }
   return(
     <>
       <h1>App component is running</h1>
-      <h2>Value is {n}</h2>
-      <button onClick={Change}>Increase</button>
+      <h2>{name} {email} {pwd} </h2>
+      Name<input type='text' name="name" value={name} onChange={Change}/><br/>
+      Email<input type='email' name="email" value={email} onChange={Change}/>
+      password<input type='password' name="pwd" value={pwd} onChange={Change}/>
+
     </>
   )
 }
