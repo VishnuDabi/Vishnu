@@ -1,0 +1,23 @@
+<h1 id="p1"></h1>
+<script>
+    let st;
+    function show()
+    {
+        let n=60;
+        st=setInterval(function()
+        {
+            if(n<0)
+            {
+                display();
+            }
+            document.getElementById('p1').innerHTML=n;
+            n--;
+        },1000);
+    }
+    function display()
+    {
+        clearInterval(st);
+        window.location.href="./25Nov22-bulbseries-by-setinterval.html"
+    }
+    show();
+</script>

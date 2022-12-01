@@ -1,0 +1,15 @@
+<h1 id="p1"></h1>
+<button onclick="show()">start</button>
+<button onclick="window.location.href='24Nov22-series-set-timeout.html'">stop</button>
+<script>
+    function show()
+    {
+        let n=1;
+        setInterval(function()
+        {
+            let dt=new Date();
+            document.getElementById('p1').innerHTML=dt+n;
+            n++;
+        },1000)
+    }
+</script>

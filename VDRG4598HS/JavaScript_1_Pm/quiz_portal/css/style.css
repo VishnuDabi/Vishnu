@@ -1,0 +1,45 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+.section-1
+{
+    /* display: flex; */
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+
+}
+.timer-container
+{
+    border: 1px solid black;
+    height:80px;
+    line-height: 50px;
+    background-color: #abc;
+}
+.question-container
+{
+    border: 1px solid black;
+    height: 180px;
+}
+.option-container
+{
+    /* width: 50%; */
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 25px;
+}
+input[type="radio"]
+{
+    size: 25px;
+}
+.section-2
+{
+    float: right;
+    width: 50%;
+    height: 180px;
+    background-color: #acb;
+    border: 1px solid;
+    box-sizing: border-box;
+}

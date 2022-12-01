@@ -1,0 +1,48 @@
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px">
+<img src="../settimeout/images/off_bulb.jpg" alt="" height="200px" width="100px"><br><br>
+<button onclick="show()">start</button>
+<button onclick="show1()">stop</button>
+<script>
+    let st;
+    let len=document.getElementsByTagName('img').length;
+    function show()
+    {
+        let i=0;
+        st=setInterval(function()
+        {
+            document.getElementsByTagName('img')[i].src="../settimeout/images/yello_bulb.jpg";
+            i++;
+            if(i>len-1)
+            {
+                show1();
+                show2();
+            }
+        },350)
+    }
+    function show2()
+    {
+        let i=len-1;
+        st=setInterval(function()
+        {
+            document.getElementsByTagName('img')[i].src="../settimeout/images/off_bulb.jpg";
+            i--;
+            if(i<0)
+            {
+                show1();
+                show();
+            }
+        },350)
+    }
+    function show1()
+    {
+        clearInterval(st);
+    }
+</script>

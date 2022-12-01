@@ -1,0 +1,62 @@
+<h1 id="p1" align="center"></h1>
+<h1 id="q"></h1>
+<span id="a"></span><input type="radio" name="r">
+<span id="b"></span><input type="radio" name="r">
+<span id="c"></span><input type="radio" name="r">
+<span id="d"></span><input type="radio" name="r">
+<script>
+    let st;
+    let c=0;
+    let result=0;
+    let data=[
+        {"Q":"what is javascript",a:'language',b:"plateform",c:"os",d:"none",ans:"a"},
+        {"Q":"what is dos",a:'language',b:"plateform",c:"os",d:"none",ans:"c"},
+        {"Q":"what is unix",a:'language',b:"plateform",c:"os",d:"none",ans:"c"},
+        {"Q":"what is java",a:'language',b:"plateform",c:"os",d:"none",ans:"a"},
+        {"Q":"what is python",a:'language',b:"plateform",c:"os",d:"none",ans:"a"},
+        {"Q":"what is react",a:'language',b:"plateform",c:"os",d:"none",ans:"a"},
+        {"Q":"what is mac",a:'language',b:"plateform",c:"os",d:"none",ans:"c"},
+        {"Q":"what is android",a:'language',b:"plateform",c:"os",d:"none",ans:"c"},
+        {"Q":"what is win32",a:'language',b:"plateform",c:"os",d:"none",ans:"b"},
+        {"Q":"what is win64",a:'language',b:"plateform",c:"os",d:"none",ans:"b"},
+    ];
+    function show()
+    {
+        let n=10;
+        let t=Math.random();
+        t=parseInt(t*10);
+        document.getElementById('q').innerHTML=data[t].Q;
+        document.getElementById('a').innerHTML=data[t].a;
+        document.getElementById('b').innerHTML=data[t].b;
+        document.getElementById('c').innerHTML=data[t].c;
+        document.getElementById('d').innerHTML=data[t].d;
+        st=setInterval(function()
+        {
+            document.getElementById('p1').innerHTML=n;
+            if(n==0)
+            {
+                display();
+            }
+            n--;
+        },700);
+
+    }
+    show();
+    function display()
+    {
+        clearInterval(st);
+        c++;
+        if(c>5)
+        {
+            done();
+        }
+        else
+        {
+            show();
+        }
+    }
+    function done()
+    {
+        window.location.href='./25Nov22-bulbseries-by-setinterval.html';
+    }
+</script>

@@ -1,0 +1,14 @@
+<h1 id="p"></h1>
+<button onclick="show()">on</button>
+<button onclick="clearInterval(st)">off</button>
+<script>
+    function show()
+    {
+        st=setInterval(() => {
+            let dt=new Date;
+            document.getElementById('p').innerHTML=dt;
+        }, 1000);
+
+    }
+    let st;
+</script>
