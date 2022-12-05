@@ -1,54 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quize Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="section-1">
-        <div class="timer-container">
-            <h1 id="p1">Timer   </h1>
-        </div>
-        <div class="question-container">
-            <h1 id="q">Questions</h1>
-        </div>
-        <div class="option-container">
-            <input type="radio" name="r" onclick="getans('a')"><span id="a">Optin1</span>
-            <br>
-            <input type="radio" name="r" onclick="getans('b')"><span id="b">Optin2</span>
-            <br>
-            <input type="radio" name="r" onclick="getans('c')"><span id="c">Optin3</span>
-            <br>
-            <input type="radio" name="r" onclick="getans('d')"><span id="d">Optin4</span>
-            <br>
-        </div>
-        <br><br>
-        <div>
-            <button onclick="show();">Start Quize</button>
-            <button onclick="clrinterval(t)">Next</button>
-        </div>
-    </div>
-    <div class="section-2">
 
+<body>
+    <div class="container-fluide">
+        <div class="section-1 row-6">
+            <div class="col-sm border">
+                <h1 id="p1">Timer </h1>
+            </div>
+            <div class="question-container border mt-1 ">
+                <h1 id="q">Questions</h1>
+            </div>
+            <div>
+                <div class="mt-1 w-100 border text-lg-start">
+                    <input type="radio" name="r" onclick="getans('a')" id="opa">
+                    <label for="opa"><span id="a">Optin1</span></label>
+                </div>
+                <div class="mt-1 w-100 border">
+                    <input type="radio" name="r" onclick="getans('b')" id="opb">
+                    <label for="opb"><span id="b">Optin2</span></label>
+                </div>
+                <div class="mt-1 w-100 border">
+                    <input type="radio" name="r" onclick="getans('c')" id="opc">
+                    <label for="opc"><span id="c">Optin3</span></label>
+                </div>
+                <div class="mt-1 w-100 border">
+                    <input type="radio" name="r" onclick="getans('d')" id="opd">
+                    <label for="opd"><span id="d">Optin4</span></label>
+                </div>
+            </div>
+            <br><br>
+            <div>
+                <button onclick="clrinterval(t)" class="btn btn-danger mt-1 w-100 shadow-lg p-3 mb-5 rounded">Next</button>
+            </div>
+        </div>
+        <div class="section-2 row-6 border-bottom col-sm">
+            <div>
+                <h2 class="mt-3">Winning Amount = <strong><span id="win-amount">0</span></strong> </h2>
+            </div>   
+            <div class="text-center">
+                <h3>Winning Prices</h3>
+                <p>100,000,000</p>
+                <p>50,000,000</p>
+                <p>1,000,000</p>
+                <p>5,000,000</p>
+                <p>2,500,000</p>
+                <p>1,000,000</p>
+                <p>800,000</p>
+                <p>400,000</p>
+                <p>200,000</p>
+                <p>100,000</p>
+                <p>50,000</p>
+                <p>25,000</p>
+                <p>20,000</p>
+                <p>10,000</p>
+                <p>5,000</p>
+                <p>2,500</p>
+            </div>           
+        </div>
     </div>
 </body>
+
 </html>
 <script>
     let data = [
-        { "Q": "Which of the following function of String object causes a string to be italic, as if it were in an <i> tag?", a: 'fontsize()', b: "fontcolor()", c: "fixed()", d: "italics()", ans: "d" },
+        { "Q": "Which of the following function of String object causes a string to be italic, as if it were in an < i > tag?", a: 'fontsize()', b: "fontcolor()", c: "fixed()", d: "italics()", ans: "d" },
         { "Q": "what is javascript", a: 'language', b: "plateform", c: "os", d: "none", ans: "a" },
         { "Q": "what is dos", a: 'language', b: "plateform", c: "os", d: "none", ans: "c" },
         { "Q": "Which tag is used to write the javascript code ", a: 'script', b: 'sp', c: `javascript`, d: `java`, ans: "a" },
         { "Q": "what is unix", a: 'language', b: "plateform", c: "os", d: "none", ans: "c" },
         { "Q": "what is java", a: 'language', b: "plateform", c: "os", d: "none", ans: "a" },
-        { "Q": "Which one is Ternary Operator", a: ' ?*', b: " ?:", c: " >?", d: " <?", ans: "b" },
+        { "Q": "Which one is Ternary Operator", a: ' ?*', b: " ?:", c: " > ?", d: " < ?", ans: "b" },
         { "Q": "Why so JavaScript and Java have similar name? ", a: ' They both originated on the island of Java', b: " JavaScript's syntax is loosely based on Java's ", c: "Both A and B ", d: " None of the above", ans: "b" },
         { "Q": "what is python", a: 'language', b: "plateform", c: "os", d: "none", ans: "a" },
         { "Q": "what is react", a: 'language', b: "plateform", c: "os", d: "none", ans: "a" },
-        { "Q": "what is mac", a: 'language', b: "plateform", c: "os", d: "none", ans: "c"},
+        { "Q": "what is mac", a: 'language', b: "plateform", c: "os", d: "none", ans: "c" },
         { "Q": "what is android", a: 'language', b: "plateform", c: "os", d: "none", ans: "c" },
         { "Q": "what is win32", a: 'language', b: "plateform", c: "os", d: "none", ans: "b" },
         { "Q": "what is win64", a: 'language', b: "plateform", c: "os", d: "none", ans: "b" },
@@ -80,57 +114,67 @@
         {
             "Q": `var a="GeeksforGeeks"; 
     var x=a.lastIndexOf("G"); 
-    document.write(x);`, a: '8', b: "9", c: "0", d: "Nothing ", ans: "8"
+    document.write(x);`, a: '8', b: "9", c: "0", d: "Nothing ", ans: "a"
         },
         { "Q": "The escape sequence ‘\f’ stands for  ", a: ' Floating numbers', b: "Representation of functions that returns a value", c: " Form feed", d: " None of the above", ans: "c" },
         { "Q": "HTML stands for -", a: 'HighText Machine Language', b: "HyperText and links Markup Language", c: "HyperText Markup Language", d: "None of these", ans: "c" },
         { "Q": "The correct sequence of HTML tags for starting a webpage is -", a: 'Head, Title, HTML, body', b: "HTML, Body, Title, Head", c: "HTML,  Title,Head, Body", d: "HTML, Head, Title, Body", ans: "d" },
         { "Q": "Which of the following element is responsible for making the text bold in HTML?", a: '< pre >', b: " < a >", c: "< b >", d: "< br >", ans: "c" },
-        { "Q": "Which of the following tag is used for inserting the largest heading in HTML?", a: '<h3>', b: "<h1>", c: "<h5>", d: "<h6>", ans: "b" },
-        { "Q": "Which of the following tag is used to insert a line-break in HTML?", a: '<br>', b: "<a>", c: "<pre>", d: "<b>", ans: "a" },
-        { "Q": "How to create an unordered list (a list with the list items in bullets) in HTML?", a: '<ul>', b: "<ol>", c: "<li>", d: "<i>", ans: "a" },
+        { "Q": "Which of the following tag is used for inserting the largest heading in HTML?", a: '< h3 >', b: "< h1 >", c: "< h5 >", d: "< h6 >", ans: "b" },
+        { "Q": "Which of the following tag is used to insert a line-break in HTML?", a: '< br >', b: "< a >", c: "< pre >", d: "< b >", ans: "a" },
+        { "Q": "How to create an unordered list (a list with the list items in bullets) in HTML?", a: '< ul >', b: "< ol >", c: "< li >", d: "< i >", ans: "a" },
         { "Q": "Which character is used to represent the closing of a tag in HTML?", a: ` \\ `, b: "!", c: "/", d: ".", ans: "c" },
-        { "Q": "How to create an ordered list (a list with the list items in numbers) in HTML?", a: '<ul>', b: "<ol>", c: "<li>", d: "<i>", ans: "b" },
-        { "Q": "Which of the following element is responsible for making the text italic in HTML?", a: '<i>', b: "<italic>", c: "<it>", d: "<pre>", ans: "a" },
-        { "Q": "How to insert an image in HTML?", a: '<img href = "jtp.png" />', b: `<img url = "jtp.png" />`, c: `<img link = "jtp.png" />`, d: `<img src = "jtp.png" />`, ans: "d" },
-        { "Q": "How to add a background color in HTML?", a: '<marquee bg color: "red">', b: `<marquee bg-color = "red">`, c: `<marquee bgcolor = "red">`, d: `<marquee color = "red">`, ans: "c" },
-        { "Q": `<input> is -`, a: `a format tag.`, b: `an empty tag.`, c: `All of the above`, d: `None of the above`, ans: `b` },
-        { "Q": `Which of the following tag is used to make the underlined text?`, a: `<i>`, b: `<ul>`, c: `<u>`, d: `<pre>`, ans: `c` },
-        { "Q": `How to create a checkbox in HTML?`, a: `<input type = "checkbox">`, b: `<input type = "button">`, c: `<checkbox>`, d: `<input type = "check">`, ans: `a` },
-        { "Q": `Which of the following tag is used to define options in a drop-down selection list?`, a: `<select>`, b: `<list>`, c: `<dropdown>`, d: `<option>`, ans: `d` },
+        { "Q": "How to create an ordered list (a list with the list items in numbers) in HTML?", a: '< ul >', b: "< ol >", c: "< li >", d: "< i >", ans: "b" },
+        { "Q": "Which of the following element is responsible for making the text italic in HTML?", a: '< i >', b: "< italic >", c: "< it >", d: "< pre >", ans: "a" },
+        { "Q": "How to insert an image in HTML?", a: '< img href = "jtp.png" / >', b: `< img url = "jtp.png" / >`, c: `< img link = "jtp.png" / >`, d: `< img src = "jtp.png" / >`, ans: "d" },
+        { "Q": "How to add a background color in HTML?", a: '< marquee bg color: "red" >', b: `< marquee bg-color = "red" >`, c: `< marquee bgcolor = "red" >`, d: `< marquee color = "red" >`, ans: "c" },
+        { "Q": `< input > is -`, a: `a format tag.`, b: `an empty tag.`, c: `All of the above`, d: `None of the above`, ans: `b` },
+        { "Q": `Which of the following tag is used to make the underlined text?`, a: `< i >`, b: `< ul >`, c: `< u >`, d: `< pre >`, ans: `c` },
+        { "Q": `How to create a checkbox in HTML?`, a: `< input type = "checkbox" >`, b: `< input type = "button" >`, c: `< checkbox >`, d: `< input type = "check" >`, ans: `a` },
+        { "Q": `Which of the following tag is used to define options in a drop-down selection list?`, a: `< select >`, b: `< list >`, c: `< dropdown >`, d: `< option >`, ans: `d` },
         { "Q": `HTML tags are enclosed in-`, a: `# and #`, b: `{ and }`, c: `! and ?`, d: `< and >`, ans: `d` },
-        { "Q": `Which of the following tag is used to add rows in the table?`, a: `<td> and </td>`, b: `<th> and </th>`, c: `<tr> and </tr>
-        `, d: `None of the above`, ans: `c` },
-        { "Q": `The <hr> tag in HTML is used for -`, a: `new line`, b: `vertical ruler`, c: `new paragraph`, d: `horizontal ruler`, ans: `d` },
+        {
+            "Q": `Which of the following tag is used to add rows in the table?`, a: `< td > and < /td >`, b: `< th > and < /th >`, c: `< tr > and < /tr >
+        `, d: `None of the above`, ans: `c`
+        },
+        { "Q": `The < hr > tag in HTML is used for -`, a: `new line`, b: `vertical ruler`, c: `new paragraph`, d: `horizontal ruler`, ans: `d` },
         { "Q": `Which of the following attribute is used to provide a unique name to an element?`, a: `class`, b: `id`, c: `type`, d: `None of the above`, ans: `b` },
-        { "Q": `The id attribute is used to specify a unique id for an element of the HTML document. It allocates the unique identifier which can be used by the JavaScript and CSS to perform certain tasks.`, a: ``, b: ``, c: ``, d: ``, ans: `` },
-        { "Q": `Which of the following HTML tag is used to display the text with scrolling effect?`, a: `<marquee>`, b: `<scroll>`, c: `<div>`, d: `None of the above`, ans: `a` },
-        { "Q": `Which of the following HTML tag is the special formatting tag?`, a: `<p>`, b: `<b>`, c: `<pre>`, d: `None of the above`, ans: `c` },
-        { "Q": `Which of the following is the correct way to send mail in HTML?`, a: `<a href = "mailto: xy@y">`, b: `<a href = "xy@y">`, c: `<mail xy@y</mail>`, d: `None of the above`, ans: `a` },
-        { "Q": `Which of the following is the container for <tr>, <th>, and <td> ?`, a: `<data>`, b: `<table>`, c: `<group>`, d: `None of the above`, ans: `b` },
-        { "Q": `How to insert a background image in HTML?`, a: `<body background = "img.png">`, b: `<img background = "img.png">`, c: `<bg-image = "img.png">`, d: `None of the above`, ans: `a` },
+        { "Q": `Which of the following HTML tag is used to display the text with scrolling effect?`, a: `< marquee >`, b: `< scroll >`, c: `< div >`, d: `None of the above`, ans: `a` },
+        { "Q": `Which of the following HTML tag is the special formatting tag?`, a: `< p >`, b: `< b >`, c: `< pre >`, d: `None of the above`, ans: `c` },
+        { "Q": `Which of the following is the correct way to send mail in HTML?`, a: `< a href = "mailto: xy@y" >`, b: `< a href = "xy@y" >`, c: `< mail xy@y< /mail >`, d: `None of the above`, ans: `a` },
+        { "Q": `Which of the following is the container for < tr >, < th >, and < td > ?`, a: `< data >`, b: `< table >`, c: `< group >`, d: `None of the above`, ans: `b` },
+        { "Q": `How to insert a background image in HTML?`, a: `< body background = " img.png" >`, b: `< img background = " img.png" >`, c: ` < bg-image = " img.png" >`, d: `None  of the above`, ans: `a` },
         { "Q": `What are the types of unordered or bulleted list in HTML?`, a: `disc, square, triangle`, b: `polygon, triangle, circle`, c: `disc, circle, square`, d: `All of the above`, ans: `c` },
-        { "Q": `Which of the following is the correct way to create a list using the lowercase letters?`, a: `<ol alpha = "a" >`, b: `<ol type = "a">`, c: `<ol letter = "a">`, d: `None of the above`, ans: `b` },
-        { "Q": `Which of the following is the correct way to start an ordered list with the count of numeric value 4?`, a: `<ol type = "1" initial = "4">`, b: `<ol type = "1" begin = "4">`, c: `<ol type = "1" num = "4">`, d: `<ol type = "1" start = "4">`, ans: `d` },
+        { "Q": `Which of the following is the correct way to create a list using the lowercase letters?`, a: `< ol alpha = "a" >`, b: `< ol type = "a" >`, c: `< ol letter = "a" >`, d: `None of the above`, ans: `b` },
+        { "Q": `Which of the following is the correct way to start an ordered list with the count of numeric value 4?`, a: `< ol type = "1" initial = "4" >`, b: `< ol type = "1" begin = "4" >`, c: `< ol type = "1" num = "4" >`, d: `< ol type = "1" start = "4" >`, ans: `d` },
         { "Q": `Which of the following HTML attribute is used to define inline styles?`, a: `style`, b: `type`, c: `class`, d: `None of the above`, ans: `a` },
         { "Q": `Which type of JavaScript language is ___`, a: `Object-Oriented`, b: `Object-Based`, c: `Assembly-language`, d: `High-level`, ans: `b` },
         { "Q": `Which one of the following also known as Conditional Expression:`, a: `Alternative to if-else`, b: `Switch statement`, c: `If-then-else statement`, d: `immediate if`, ans: `d` },
         { "Q": `In JavaScript, what is a block of statement?`, a: `Conditional block`, b: `block that combines a number of statements into a single compound statement`, c: `both conditional block and a single statement`, d: `block that contains a single statement`, ans: `b` },
-        { "Q": `When interpreter encounters an empty statements, what it will do:
+        {
+            "Q": `When interpreter encounters an empty statements, what it will do:
         `, a: `Shows a warning`, b: `Prompts to complete the statement`, c: `Throws an error`, d: `Ignores the statements
-        `, ans: `d` },
-        { "Q": `The "function" and " var" are known as:`, a: `Keywords
+        `, ans: `d`
+        },
+        {
+            "Q": `The "function" and " var" are known as:`, a: `Keywords
         `, b: `Data types
-        `, c: `Declaration statements`, d: `Prototypes`, ans: `c` },
-        { "Q": `Which of the following variables takes precedence over the others if the names are the same?`, a: `Global variable`, b: `The local element`, c: `The two of the above
-        `, d: `None of the above`, ans: `b` },
-        { "Q": ` Which one of the following is the correct way for calling the JavaScript code?`, a: `Preprocessor`, b: `Triggering Event`, c: `RMI
-        `, d: `Function/Method`, ans: `d` },
-        { "Q": `Which of the following type of a variable is volatile?
-        
-        `, a: `Mutable variable`, b: `Dynamic variable`, c: `Volatile variable`, d: `Immutable variable`, ans: `a` },
-        { "Q": `Which of the following option is used as hexadecimal literal beginning?`, a: `00`, b: `0x`, c: `0X`, d: `Both 0x and 0X
-        `, ans: `d` },
+        `, c: `Declaration statements`, d: `Prototypes`, ans: `c`
+        },
+        {
+            "Q": `Which of the following variables takes precedence over the others if the names are the same?`, a: `Global variable`, b: `The local element`, c: `The two of the above
+        `, d: `None of the above`, ans: `b`
+        },
+        {
+            "Q": ` Which one of the following is the correct way for calling the JavaScript code?`, a: `Preprocessor`, b: `Triggering Event`, c: `RMI
+        `, d: `Function/Method`, ans: `d`
+        },
+        { "Q": `Which of the following type of a variable is volatile?`, a: `Mutable variable`, b: `Dynamic variable`, c: `Volatile variable`, d: `Immutable variable`, ans: `a` },
+        { "Q": `Which of the following is the container for < tr >, < th >, and < td > ?`, a: `< data >`, b: `< table >`, c: `< group >`, d: `None of the above`, ans: `b` },
+        {
+            "Q": `Which of the following option is used as hexadecimal literal beginning?`, a: `00`, b: `0x`, c: `0X`, d: `Both 0x and 0X
+        `, ans: `d`
+        },
         { "Q": ` When there is an indefinite or an infinite value during an arithmetic computation in a program, then JavaScript prints______.`, a: `Prints an exception error`, b: `Prints an overflow error`, c: `Displays "Infinity"`, d: `Prints the value as such`, ans: `c` },
         { "Q": `In the JavaScript, which one of the following is not considered as an error:`, a: `Syntax error`, b: `Missing of semicolons`, c: `Division by zero`, d: `Missing of Bracket`, ans: `c` },
         { "Q": `Which of the following givenfunctions of the Number Object formats a number with a different number of digits to the right of the decimal?`, a: `toExponential()`, b: `toFixed()`, c: `toPrecision()`, d: `toLocaleString()`, ans: `b` },
@@ -141,10 +185,12 @@
         { "Q": `Suppose we have a text "human" that we want to convert into string without using the "new" operator. Which is the correct way from the following to do so:`, a: `toString()`, b: `String(human)`, c: `String newvariable="human"`, d: `Both human.toString() and String(human)`, ans: `d` },
         { "Q": `In JavaScript, what will be used for calling the function definition expression:`, a: `Function prototype`, b: `Function literal`, c: `Function calling`, d: `Function declaration`, ans: `b` },
         { "Q": `The "new Point(3,2)", is a kind of _______ expression`, a: `Object Creation Expression`, b: `Primary Expression`, c: `Invocation Expression`, d: `Constructor Calling Expression`, ans: `a` },
-        { "Q": `Which one of the following operator is used to check weather a specific property exists or not:`, a: `Exists`, b: `exist
-        `, c: `within`, d: `in`, ans: `d` },
+        {
+            "Q": `Which one of the following operator is used to check weather a specific property exists or not:`, a: `Exists`, b: `exist
+        `, c: `within`, d: `in`, ans: `d`
+        },
         { "Q": `An expression that can legally appear on the left side of an assignment expression." is a well known explanation for variables, properties of objects, and elements of arrays. They are called_____.`, a: `Properties `, b: `Prototypes`, c: `Definition`, d: `Lvalue`, ans: `d` },
-        { "Q": `What we will get if we compare the "one" with "8" using the less than operator ("one"<8)?`, a: `False`, b: `True`, c: `NaN`, d: `Undefined`, ans: `a` },
+        { "Q": `What we will get if we compare the "one" with "8" using the less than operator ("one" < 8)?`, a: `False`, b: `True`, c: `NaN`, d: `Undefined`, ans: `a` },
         { "Q": `Which one of the following is known as the Equality operator, which is used to check whether the two values are equal or not:`, a: `=`, b: `===`, c: `==`, d: `&&`, ans: `c` },
         { "Q": `In a case, where the value of the operator is NULL , the typeof returned by the unary operator is___.`, a: `undefined`, b: `string`, c: `boolean`, d: `object`, ans: `d` },
         { "Q": `Which one of the following operator returns false if both values are equal?`, a: `!`, b: `!==`, c: `!=`, d: `All of the above`, ans: `c` },
@@ -155,10 +201,12 @@
         { "Q": `What is the basic purpose of the "toLocateString()" method?`, a: `It returns a localised object representation`, b: `It returns a localized string representation of the object`, c: `It return a local time in the string format`, d: `It return a parsed string`, ans: `b` },
         { "Q": ` A set of unordered properties that, has a name and value is called______`, a: `String`, b: `Array`, c: `Serialized Object`, d: `Object`, ans: `d` },
         { "Q": `A collection of elements of the same data type which may either in order or not, is called _____.`, a: `String`, b: `Array`, c: `Serialized Object`, d: `Object`, ans: `b` },
-        { "Q": `The linkage of a set of prototype objects is known as______`, a: `prototype stack`, b: `prototype`, c: `prototype class`, d: `prototype chain
-        `, ans: `d` },
+        {
+            "Q": `The linkage of a set of prototype objects is known as______`, a: `prototype stack`, b: `prototype`, c: `prototype class`, d: `prototype chain
+        `, ans: `d`
+        },
         { "Q": `To know about an object, whether the object is a prototype (or a part of a prototype chain) of another object, the user can use_______`, a: `==operator`, b: `equals() method`, c: `=== operator`, d: `isPrototypeOf() method`, ans: `d` },
-        { "Q": `Which one of the following method or operator is used for identification of the array?`, a: `Typeof`, b: `==`, c: `===`, d:`isarrayType()`, ans: `d` },
+        { "Q": `Which one of the following method or operator is used for identification of the array?`, a: `Typeof`, b: `==`, c: `===`, d: `isarrayType()`, ans: `d` },
         { "Q": `For which purpose the array "map()" methods is used ?`, a: `It used for mapping the elements of another array into itself.`, b: `It passes each data-item of the array and returns the necessary mapped elements.`, c: `It passes the data-items of an array into another array.`, d: `It passes every element of the array on which it is invoked to the function you specify, and returns an array containing the values returned by that function.`, ans: `d` },
         { "Q": " By which javascript code is used ", a: 'Classes', b: "Methods/Functions", c: "RMI", d: "Events", ans: "b" }
     ];
@@ -168,20 +216,35 @@
     let count = 0;
     let result = 0;
     let t;
-    // alert(data.length);
+    let winAm = 2500;
+    let br = 0;
+    let paraLen=document.getElementsByTagName('p').length;
+    let targetQ=parseInt(prompt("Enter a Question number for saving mode "));
     function getans(p) {
         ans = p;
     }
     function show() {
-        let n = 5;
-        // t = Math.random();
-        // t = parseInt(t *100);
-        t=40
+        document.getElementById('opa').checked = false;
+        document.getElementById('opb').checked = false;
+        document.getElementById('opc').checked = false;
+        document.getElementById('opd').checked = false;
+        let n = 40;
+        t = Math.random();
+        t = parseInt(t * 100);
         st = setInterval(function () {
             if (n <= 0) {
                 clrinterval(t);
             }
-            document.getElementById('p1').innerHTML = n;
+            if (n <= 60 && n > 30) {
+                document.getElementById('p1').style.color = "green";
+            }
+            else if (n <= 30 && n > 10) {
+                document.getElementById('p1').style.color = "yellow";
+            }
+            else {
+                document.getElementById('p1').style.color = "red";
+            }
+            document.getElementById('p1').innerHTML = n + " Second Remaining";
             document.getElementById("q").innerHTML = data[t].Q;
             document.getElementById("a").innerHTML = data[t].a;
             document.getElementById("b").innerHTML = data[t].b;
@@ -195,20 +258,57 @@
     function clrinterval(qNo) {
         if (data[qNo].ans == ans) {
             result++;
-        }
-        console.log("Q. No:-" + qNo + " Ans= " + ans);
-        clearInterval(st);
-        count++;
-        if (count >= 5) {
-            alert("your result = " + result);
-            exite();
+            console.log('Correct ans = '+data[qNo].ans);
+            if(result==1)
+            {
+                winAm = result * winAm;
+            }
+            else
+            {
+                winAm = 2 * winAm;
+            }
+            if(targetQ>=result)
+            {
+                document.getElementById('win-amount').innerHTML = winAm;
+            }
+            else
+            {
+                document.getElementById('win-amount').innerHTML = winAm;
+            }
+            document.getElementsByTagName('p')[paraLen-result].style.color="red"
+            document.getElementsByTagName('p')[paraLen-result].style.backgroundColor="yellow"
         }
         else {
-            show();
+            console.log('Correct ans = '+data[qNo].ans);
+            br++;
+        }
+        if (br == 0) {
+
+            console.log("Q. No:-" + qNo + " Ans= " + ans);
+            clearInterval(st);
+            count++;
+            if (count >= 20) {
+                alert("your result = " + result);
+                exite();
+            }
+            else {
+                show();
+            }
+        }
+        else if(br!=0 && targetQ>=result){ 
+            document.getElementById('win-amount').innerHTML = 0;
+            clearInterval(st);
+            alert("your result = " + result);
+        }
+        else if(br!=0 && targetQ<=result)
+        {
+            document.getElementById('win-amount').innerHTML = winAm;
+            clearInterval(st);
+            alert("your result = " + result);
         }
     }
     function exite() {
         // window.location.href="google.com";
     }
-
+    show(); 
 </script>

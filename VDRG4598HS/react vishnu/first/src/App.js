@@ -1,117 +1,94 @@
-// import './App.css';
-// import React from "react";
-import React, {useState} from "react";
+import React from 'react'
+// import ChildA from './components/ChildA';
 
-// import App1 from "./data/3Nov22-App";
-// import { First,Second } from "./data/8nov22-first";
-// import Abc from "./data/8nov22-first";
-// import Props_Child from "./data/8Nov22-props";
-// const App=()=>
-// {
-  /*<div>
-      <h1>Hello all...</h1>
-      <p>learning React... </p>               // By using Div Tag
-    </div>
-    */
+// 2 to 8 Nov code 
+
+// import Child from './components/diff_type-of-return';
+// import { Child1,Child2 } from './components/diff_type-of-return';
+// import First, { Second,Third } from './components/First';
+// import ChildA from './components/child';
+// import First from './components/First';
+import UpdatevalueFunc from './components/UpdateValue';
+
+import InputTypeFields from './components/InputAllTypeFields-Uncontrolled';
+import Appinputfield from './components/Input_field-number';
+import EmpData from './components/Input-controlled-type';
+// 2 to 8 Nov code 
+// import ChildProps from './props component/PropsChild';
+// import ChildProps1 from './props component/PropsChild';
+// const App = () => {
+//   var n=5;
+//     // 2 to 8 Nov code  
+//   return (
+//     <>
+//       { <h1>App.js works</h1> }    
+//       <Child/>
+//       <First/>
+//       <Second/>
+//       <Third/>        
+//       <ChildA/>
+//       <Child1/>
+//       <Child2/> 
+//             {/* 8 to 8 Nov code          */}
+//       <ChildProps name="programmers point" address="Indore | ujjain" />
+//       <ChildProps1 name="programmers point" address="Indore | ujjain" />
+      
+//     </>
+//    )
+// } 
+  // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
   
-    /*
-    <React.Fragment>
-      <h2>Hello alll</h2>
-      <p>By using raect fragment</p>                             
-    </React.Fragment>
-}
-    */
-
-
-    //  9 Nov 22
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
   // const App=()=>
   // {
-  // var n=11;
-  // return (
-  //    <>
-  //       <h1>App running</h1>
-  //       <p>By Using React fragment syntentic sugar form</p>       
-  //       <br/>       
-  //       <img src="https://www.whatsappimages.in/wp-content/uploads/2021/07/Top-HD-sad-quotes-for-whatsapp-status-in-hindi-Pics-Images-Download-Free.gif" height={250} width={200} align='center' alt="alon men"/>
-  //       <App1/>
-  //       <Abc/>
-  //       {n%2===0?<First/>:<Second/>}
-  //       <Props_Child name={"Programmers Point"} address={"Ujjain | Indore"}/>
-  //    </>
-  //     )
-  //   }
-        /*  12 Nov 22 */
+  //   return(
+  //     <>
+  //       <UpdatevalueFunc/>
+  //       <Appinputfield/>
+  //     </>
+  //   )
+  // }
 
-// const App=()=>{
-//   // var n=5;                       /* default value given in useState so comment this line */
-//   var [n,updatevalue]=useState(5);  /*  5 in useState is default value of n*/
-//   const Change=(e)=>{
-//     updatevalue(e.target.value);
-//     // console.log(e.target.name);
-//     // console.log(e.target.value);
-//     // console.log(e.target.type);
-//     updatevalue(n+=1);
-//   }
-//   return(
-//     <>
-//       <h1>App component is running</h1>
-//       <h2>Value is {n}</h2>
-//       <button onClick={Change}>Increase</button>
-//     </>
-//   )
-// }
-
-// 15 Nov 22  first way
-// const App=()=>{
-//   let [name,updatename]=useState();
-//   let [email,updateemail]=useState();
-//   let [pwd,updatepwd]=useState();
-//   const Change=(e)=>{
-//     updatename(e.target.value);
-//   }
-//   return(
-//     <>
-//       <h1>App component is running</h1>
-//       <h2>{name} {email} {pwd} </h2>
-//       Name<input type='text' name="name" value={name} onChange={Change}/><br/>
-//       Email<input type='email' name="email" value={email} onChange={Change}/>
-//       password<input type='password' name="pwd" value={pwd} onChange={Change}/>
-
-//     </>
-//   )
-// }
-
-// 2nd way
-const App=()=>{
-  let [name,updatename]=useState();
-  let [email,updateemail]=useState();
-  let [pwd,updatepwd]=useState();
-  const Change=(e)=>{
-    if(e.target.value==="name")
-    {
-      updatename(e.target.value);
-    }
-    else if(e.target.value==='email')
-    {
-      updateemail(e.target.value);
-    }
-    else
-    {
-      updatepwd(e.target.value);
-    }
+  //   const App=()=>{
+  //   return(
+  //     <>
+  //       <InputTypeFields/>
+  //       <EmpData/>
+  //     </>
+  //   )
+  // }
+  // ///////////////////////////////////////////////////////////////////////////
+    const App=()=>{
+    return(
+      <>
+        <h1>App component is running...</h1>
+        <div>
+          <h1>Technology : Java</h1>
+          <h2>Duration : 1 year</h2>
+          <h2>Fees : 280000</h2>
+          <img src='' height="150px" alt='Imges'/>
+        </div>
+        <div>
+          <h1>Technology : Python</h1>
+          <h2>Duration : 1 year</h2>
+          <h2>Fees : 260000</h2>
+          <img src='' height="150px" alt='Imges'/>
+        </div>
+        <div>
+          <h1>Technology : Mern</h1>
+          <h2>Duration : 10 Month</h2>
+          <h2>Fees : 180000</h2>
+          <img src='' height="150px" alt='Imges'/>
+        </div>
+        <div>
+          <h1>Technology : React</h1>
+          <h2>Duration : 8 Months</h2>
+          <h2>Fees : 180000</h2>
+          <img src='' height="150px" alt='Imges'/>
+        </div>
+        </>
+    )
   }
-  return(
-    <>
-      <h1>App component is running</h1>
-      <h2>{name} {email} {pwd} </h2>
-      Name<input type='text' name="name" value={name} onChange={Change}/><br/>
-      Email<input type='email' name="email" value={email} onChange={Change}/>
-      password<input type='password' name="pwd" value={pwd} onChange={Change}/>
-
-    </>
-  )
-}
-
-    
- 
 export default App;
