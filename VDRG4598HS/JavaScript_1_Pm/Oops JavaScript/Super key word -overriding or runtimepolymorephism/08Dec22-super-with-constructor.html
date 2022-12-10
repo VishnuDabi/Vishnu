@@ -1,0 +1,23 @@
+<script>
+    class Base
+    {
+        constructor()
+        {
+            this.a=10;
+            console.log('constructor is running from Base');
+        }
+    }
+    class Demo extends Base
+    {
+        constructor()
+        {
+            super();
+            this.a=20;
+            console.log(this.a);
+            console.log(super.a);
+            console.log('constructor is running from Demo');
+        }
+    }
+    var n=new Demo();
+    
+</script>

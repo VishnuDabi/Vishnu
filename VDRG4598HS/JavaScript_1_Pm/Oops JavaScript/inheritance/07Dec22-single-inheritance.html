@@ -1,0 +1,34 @@
+<script>
+    class Calculator
+    {
+        add(a,b)
+        {
+            console.log("add = "+(a+b));
+        }
+        sub(a,b)
+        {
+            console.log("sub = "+(a-b));
+        }
+        mul(a,b)
+        {
+            console.log("mul = "+(a*b));
+        }
+        div(a,b)
+        {
+            console.log("div = "+(a/b));
+        }
+    }
+    class Demo extends Calculator
+    {
+        show()
+        {
+            console.log("Show is running from Demo");
+        }
+    }
+    var d=new Demo();
+    d.show();
+    d.add(10,20);
+    d.sub(10,20);
+    d.mul(10,20);
+    d.div(10,20);
+</script>

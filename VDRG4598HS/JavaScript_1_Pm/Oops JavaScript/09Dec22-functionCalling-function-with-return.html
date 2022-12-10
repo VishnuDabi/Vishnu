@@ -1,0 +1,14 @@
+<script>
+    function show()
+    {
+        console.log('show start');
+        function display()
+        {
+            console.log('display is running');
+        }
+        console.log('show end');
+        return display;
+    }
+    var disp=show();                                    // show()=>display      =>disp=sisplay
+    disp();                                              // disp()
+</script>

@@ -1,0 +1,18 @@
+<script>
+    class Base
+    {
+        show()
+        {
+            console.log('show is running from Base');
+        }
+    }
+    class Demo extends Base
+    {
+        show()
+        {
+            console.log('show is running from Demo');
+        }
+    }
+    var d= new Demo();
+    d.show();       //      first object search show methode. they find in Demo so call that method.
+</script>

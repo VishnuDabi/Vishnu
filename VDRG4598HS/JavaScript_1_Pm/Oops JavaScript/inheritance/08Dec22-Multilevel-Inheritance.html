@@ -1,0 +1,29 @@
+<script>
+    class Base
+    {
+        show()
+        {
+            console.log('Show is running from base');
+        }
+    }
+    class Demo extends Base
+    {
+        display()
+        {
+            console.log("display is running from Demo");
+        }
+    }
+    class Dummy extends Demo
+    {
+        display()
+        {
+            console.log('display is running from dummy');
+        }
+    }
+    var d= new Demo();
+    var d1=new Dummy();
+    d.show();
+    d.display();
+    d1.show();
+    d1.display();
+</script>

@@ -1,0 +1,25 @@
+<script>
+    class Base
+    {
+        show()
+        {
+            console.log('Show is running from base');
+        }
+        hide()
+        {
+            console.log('hide is running from base');
+        }
+
+    }
+    class Demo extends Base
+    {
+        show()
+        {
+            super.show();
+            super.hide();                                   // calling parent class methode using super.show();
+            console.log('Show is running from Demo');
+        }
+    }
+    var d=new Demo;
+    d.show();
+</script>

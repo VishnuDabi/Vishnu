@@ -1,0 +1,17 @@
+<script>
+    function show()
+    {
+        console.log('show start');
+        var i=10;
+        function display()
+        {
+            console.log('display is running');
+            console.log('Value of i is = '+i);
+        }
+        console.log('show end');
+        return display;
+    }
+    var disp=show();                                    // show()=>display      =>disp=sisplay
+    disp();                                              // disp()
+</script>
+<!-- Js closer is technique through which inner function access properties of outer function -->

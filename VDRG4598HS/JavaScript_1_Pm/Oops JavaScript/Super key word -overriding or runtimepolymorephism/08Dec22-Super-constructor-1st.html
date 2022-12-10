@@ -1,0 +1,18 @@
+<script>
+    class Base
+    {
+        constructor()
+        {
+            console.log("constructor is running from Base")
+        }
+    }
+    class Demo extends Base
+    {
+        constructor()
+        {
+            super();        // it will call parent class constuctor
+            console.log("constructor is running from Demo");
+        }
+    }
+    var d= new Demo();
+</script>

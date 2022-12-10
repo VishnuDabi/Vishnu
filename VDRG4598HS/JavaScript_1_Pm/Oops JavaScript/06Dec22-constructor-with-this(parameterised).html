@@ -1,0 +1,22 @@
+<script>
+    class Emp
+    {
+        constructor(id,name)
+        {
+            this.id=id;
+            this.name=name;
+        }
+        // methode function
+        show()
+        {
+            console.log(this.id+" "+this.name);
+        }
+        static display()
+        {
+            console.log("static display is running..");
+        }
+    }
+    var d=new Emp.static(100,"rj");
+    d.show();
+    Emp.display();                                  // for calling static methode we will call it through by class name
+</script>
