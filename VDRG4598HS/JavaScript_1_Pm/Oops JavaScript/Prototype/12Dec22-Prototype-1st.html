@@ -1,0 +1,15 @@
+<script src="./12Dec22-class-Demo.js"></script>
+<script>
+    Demo.prototype.a=10;
+    Demo.prototype.display=function()
+    {
+        console.log('display is running');
+    }
+    var d=new Demo();
+    d.show();
+    console.log(d.a);
+    d.display();
+</script>
+<!--   syntax:-          class_name.prototype.methode_name=function(){
+                            //body
+                            }; -->

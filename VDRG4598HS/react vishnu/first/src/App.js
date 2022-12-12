@@ -1,16 +1,22 @@
 // ######################       19 Nov 22       ##############################
-import React, { createContext } from 'react'
+import React, { createContext, useEffect, useState } from 'react';
+import GetData from './components/Api/10Dec22-get-methode';
+// import Pt from './components/Api/11Dec22-adddata';
+import Pt from './components/patern';
+import { Br } from './components/patern';
+// import React, { createContext } from 'react'
 // import Third_context from './components/context/19Nov-Context-provider-consumer';
 // import Use_context from './components/context/19Nov-UseContext'
 
 // ########################     22  Nov  22     ####################################################
 // import AppUseState from './components/22Nov-1st-UseState-inc-decr';
-// #########################      26 NOV  22      ##################################################
-import Inline from './components/26Nov22-inline-Styling';
-import InternalCss from './components/26Nov22-internal-css';
-import ExternalCss from './components/26Nov22-ExternalCss';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import ChildProptypes from './components/26Nov22-Prototype';
+// #########################      26 NOV  22  - 10 Dec 22     ##################################################
+// import Inline from './components/26Nov22-inline-Styling';
+// import InternalCss from './components/26Nov22-internal-css';
+// import ExternalCss from './components/26Nov22-ExternalCss';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import ChildProptypes from './components/26Nov22-Prototype';
+// import Datatable from './components/10Dec22-get-methode';
 // import Third_context from './components/contex/Third-usecontext';
 // import ChildA from './components/ChildA';
 
@@ -49,82 +55,100 @@ import ChildProptypes from './components/26Nov22-Prototype';
 //             {/* 8 to 8 Nov code          */}
 //       <ChildProps name="programmers point" address="Indore | ujjain" />
 //       <ChildProps1 name="programmers point" address="Indore | ujjain" />
-      
+
 //     </>
 //    )
 // } 
-  // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-  // const App=()=>
-  // {
-  //   return(
-  //     <>
-  //       <UpdatevalueFunc/>
-  //       <Appinputfield/>
-  //     </>
-  //   )
-  // }
 
-  //   const App=()=>{
-  //   return(
-  //     <>
-  //       <InputTypeFields/>
-  //       <EmpData/>
-  //     </>
-  //   )
-  // }
-  // ////////////////////////////   15 NOV 22   ///////////////////////////////////////////////
-  //   const App=()=>{
-  //     return(
-  //       <>
-  //         {/* <Language/> */}
-  //         {
-  //           Data.map(function(v)
-  //           {
-  //             return <Lang name={v.name} fees={v.fees} duration={v.duration} img={v.img} />
-  //           })
-  //         }
-  //         {
-  //           <Lang/>
-  //         }
-  //       </>
-  //     )
-  // }
-  // //////////////////////////     19   NOV  22     ///////////////////////////////////////////////////////////////////////////////
-  // let Name;
-  // let Course;
-  // const App=()=>
-  // {
-  //   Name=createContext();
-  //   Course=createContext();
-  //   return (
-  //     <>
-  //       <h1>App Running...</h1>
-  //       <Name.Provider value="progmming Machine">
-  //       <Course.Provider value='We are coders '>
-  //       <Third_context/>
-  //       <Use_context/>
-  //       </Course.Provider>
-  //       </Name.Provider>
-  //     </>
-  //   )
-  // }
-  // ################     22  NOV   22    ####################################################
-  const App=()=>{
-    let nm='ajay'
-    return (
-      <>
-        {/* <AppUseState/> */}
-        <Inline/>
-        <InternalCss/>
-        <ExternalCss/>
-        <ChildProptypes name={nm} mob={64895226552} addresses={['indore','ujjain']} />
-      </>
-    )
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const App=()=>
+// {
+//   return(
+//     <>
+//       <UpdatevalueFunc/>
+//       <Appinputfield/>
+//     </>
+//   )
+// }
+
+//   const App=()=>{
+//   return(
+//     <>
+//       <InputTypeFields/>
+//       <EmpData/>
+//     </>
+//   )
+// }
+// ////////////////////////////   15 NOV 22   ///////////////////////////////////////////////
+//   const App=()=>{
+//     return(
+//       <>
+//         {/* <Language/> */}
+//         {
+//           Data.map(function(v)
+//           {
+//             return <Lang name={v.name} fees={v.fees} duration={v.duration} img={v.img} />
+//           })
+//         }
+//         {
+//           <Lang/>
+//         }
+//       </>
+//     )
+// }
+// //////////////////////////     19   NOV  22     ///////////////////////////////////////////////////////////////////////////////
+// let Name;
+// let Course;
+// const App=()=>
+// {
+//   Name=createContext();
+//   Course=createContext();
+//   return (
+//     <>
+//       <h1>App Running...</h1>
+//       <Name.Provider value="progmming Machine">
+//       <Course.Provider value='We are coders '>
+//       <Third_context/>
+//       <Use_context/>
+//       </Course.Provider>
+//       </Name.Provider>
+//     </>
+//   )
+// }
+// ################     22  NOV   22  -  10  Dec  22  ####################################################
+// const App=()=>{
+//   let nm='ajay'
+//   return (
+//     <>
+//       {/* <AppUseState/> */}
+//       <Inline/>
+//       <InternalCss/>
+//       <ExternalCss/>
+//       <ChildProptypes name={nm} mob={64895226552} addresses={['indore','ujjain']} />
+//       <Datatable/>
+//     </>
+//   )
+// }
+// ########################          10 Dec 22 -       ######################################################
+  // return (
+  //   <>
+  //     <GetData/>
+  //   </>
+  // )
+// }
+const App=()=>{
+  for(var i=0;i<=5;i++)
+  {
+    for(var j=0;j<=i;j++)
+    {
+      return <Pt/>
+    }
+    return <Br/>
   }
+}
 export default App;
 // ###############          19 Nov 22       #######################
 // export {Name,Course}

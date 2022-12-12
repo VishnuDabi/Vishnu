@@ -1,0 +1,16 @@
+<script>
+    function show()
+    {
+        console.log('show is running');
+    }
+    show.prototype.display=function(){
+        console.log('display is running');
+        this.a=50;
+    };
+    show.prototype.display1=function(){
+        console.log('a='+this.a);
+    }
+    var s= new show();
+    s.display();
+    s.display1();
+</script>
