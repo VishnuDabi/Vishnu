@@ -1,0 +1,39 @@
+<script>
+    function show()
+    {
+        let a=10;
+        if(true)
+        {
+            let a=20;           //  create new variable a with value 20; For their block only
+            console.log(a);
+        }
+        if(true)
+        {
+            console.log(a);     // access global a
+        }
+        console.log(a);
+    }
+    show();
+    function display()
+    {
+        let b=10;
+        if(true)
+        {
+            b=20;                                   //      change value of b
+            console.log(b);
+        }
+        if(true)
+        {
+            console.log(b);
+        }
+        console.log(b);
+    }
+    display();
+</script>
+<!-- 
+    let variable proprties
+1.  can't Declare at the end
+2.  Does'nt support Concept of Hoisting 
+3.  Does'nt construct variable as propety of window object
+4. we can modify or change value of let
+ -->

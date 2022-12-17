@@ -1,9 +1,9 @@
 // ######################       19 Nov 22       ##############################
 import React, { createContext, useEffect, useState } from 'react';
 import GetData from './components/Api/10Dec22-get-methode';
+import Add from './components/Api/11Dec22-adddata';
 // import Pt from './components/Api/11Dec22-adddata';
-import Pt from './components/patern';
-import { Br } from './components/patern';
+// import GetData from './components/Api/10Dec22-get-methode';
 // import React, { createContext } from 'react'
 // import Third_context from './components/context/19Nov-Context-provider-consumer';
 // import Use_context from './components/context/19Nov-UseContext'
@@ -118,6 +118,8 @@ import { Br } from './components/patern';
 //     </>
 //   )
 // }
+// export default App;
+// export {Name,Course}
 // ################     22  NOV   22  -  10  Dec  22  ####################################################
 // const App=()=>{
 //   let nm='ajay'
@@ -133,22 +135,13 @@ import { Br } from './components/patern';
 //   )
 // }
 // ########################          10 Dec 22 -       ######################################################
-  // return (
-  //   <>
-  //     <GetData/>
-  //   </>
-  // )
-// }
 const App=()=>{
-  for(var i=0;i<=5;i++)
-  {
-    for(var j=0;j<=i;j++)
-    {
-      return <Pt/>
-    }
-    return <Br/>
-  }
+  return (
+    <>
+      {/* <GetData/> */}
+      <Add/>
+    </>
+  )
 }
 export default App;
 // ###############          19 Nov 22       #######################
-// export {Name,Course}
