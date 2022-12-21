@@ -1,0 +1,16 @@
+<script>
+    var a=10;
+    console.log(a);
+    a=20;
+    console.log(a);
+    var p= new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve(a=30);
+        },2000);
+    });
+    p.then((v)=>{
+        console.log(v);
+    }).catch((v)=>{
+        console.log(v);
+    });
+</script>
