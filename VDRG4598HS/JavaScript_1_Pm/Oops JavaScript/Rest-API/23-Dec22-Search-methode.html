@@ -1,0 +1,27 @@
+Enter Id:-<input type="number" name="" id="id"><br><br>
+<button onclick="show()">Show Data</button>
+<button onclick="search()">Search</button>
+
+<script>
+    async function show()
+    {
+        let res=await fetch(`http://restapiss.herokuapp.com/product`);
+        console.log(res);
+        let data=await res.json();
+        console.log(data);
+    }
+    async function search()
+    {
+        let id=document.getElementById('id').value;
+        let res=await fetch(`http://restapiss.herokuapp.com/product/${id}`);
+        if(res.status==404)
+        {
+            alert('product not found');
+        }
+        else
+        {
+            let data=await res.json();
+            console.log(data);
+        }
+    }
+</script>

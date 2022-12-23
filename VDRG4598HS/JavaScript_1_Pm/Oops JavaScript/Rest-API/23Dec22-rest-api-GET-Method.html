@@ -1,0 +1,9 @@
+<button onclick="show()">Show Data</button>
+<script>
+    async function show()
+    {
+        let res=await fetch('http://restapiss.herokuapp.com/product');
+        let data=await res.json();
+        console.log(data);
+    }
+</script>

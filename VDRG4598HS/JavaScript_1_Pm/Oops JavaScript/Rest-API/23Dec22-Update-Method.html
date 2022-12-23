@@ -1,0 +1,60 @@
+Enter ID:- <input type="number" name="" id="id"><br><br>
+name: <input type="text" name="" id="nm"><br><br>
+price: <input type="text" name="" id="price"><br><br>
+cat: <input type="text" name="" id="cat"><br><br>
+cmp: <input type="text" name="" id="cmp"><br><br>
+<button onclick="show()">show data</button><br><br>
+<button onclick="add()">Add Product</button><br><br>
+<button onclick="deleteOne()">Delete Data</button><br><br>
+<script>
+    async function show()
+    {
+        let res=await fetch(`http://restapiss.herokuapp.com/product`);
+        let data=await res.json();
+        console.log(data);
+    }
+    async function add()
+    {
+        let obj={
+            name:document.getElementById('nm').value,
+            price:document.getElementById('price').value,
+            cat:document.getElementById('cat').value,
+            cmp:document.getElementById('cmp').value
+        }
+        let options={
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json;charset=utf-8'
+            },
+            body:JSON.stringify(obj)
+        };
+        let res=await fetch(`http://restapiss.herokuapp.com/product/`,options);
+        if(res.status==201)
+        {
+            alert('product added sucessfully');
+        }
+        else
+        {
+            alert('Unable to add');
+        }
+    }
+    async function deleteOne()
+    {
+        let id =document.getElementById('id').value;
+        let options={
+            method:'DELETE',
+            headers:{
+                'Content-Type':'application/json;charset=utf-8'
+            }
+        }
+        let res=await fetch(`http://restapiss.herokuapp.com/product/${id}`,options);
+        if(res.status==204)
+        {
+            // alert('Product deleted sucssefully');
+        }
+        else
+        {
+            alert('product not found');
+        }
+    }
+</script>

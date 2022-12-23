@@ -14,17 +14,17 @@
 .company-info
 {
     float: left;
-    width: 65%;
+    max-width: 65%;
 }
 .login-page
 {
     float: right;
-    width: 30%;
+    max-width: 30%;
 }
 .partition-main
 {
-    height: 500px;
-    width: 100%;
+    max-height: 500px;
+    max-width: 100%;
     background-color: bisque;
 }
 img{
@@ -32,7 +32,7 @@ img{
 }
 .partition-1
 {
-    height: 100%;
+    max-height: 100%;
     width: 20%;
     float: left;
     /* background-color: blueviolet; */
