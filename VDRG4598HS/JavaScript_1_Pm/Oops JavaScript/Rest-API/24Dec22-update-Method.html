@@ -1,0 +1,47 @@
+Enter input<input type="number" name="" id="id"><br><br>
+<button onclick="seacrh()">Search</button>
+<button onclick="showdata()">Show all data</button><br><br>
+
+name:-<input type="text" name="" id="nm">
+price:-<input type="number" name="" id="price">
+Category:-<input type="text" name="" id="cat">
+Company:-<input type="text" name="" id="com"><br><br>
+<button onclick="addproduct()">Add data</button>
+
+<script>
+    async function showdata() {
+        let res = await fetch("https://restapiss.herokuapp.com/product/")
+        let data = await res.json()
+        console.log(data)
+    }
+    async function seacrh() {
+        let id = document.getElementById('id').value
+        let res = await fetch(`https://restapiss.herokuapp.com/product/${id}`)
+        if (res.status == 404) {
+            alert('product not found')
+        }
+        else {
+            let data = await res.json()
+            console.log(data)
+        }
+    }
+    async function addproduct() {
+        var obj = {
+            name: document.getElementById('nm').value,
+            price: document.getElementById('price').value,
+            cat: document.getElementById('cat').value,
+            cmp: document.getElementById('com').value
+        }
+        let options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(obj)
+        }
+        let res = await fetch("https://restapiss.herokuapp.com/product/", options);
+        if (res.status == 201) {
+            alert('product added sucessfully')
+        }
+    }
+</script>

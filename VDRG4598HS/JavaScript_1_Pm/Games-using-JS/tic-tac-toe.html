@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TAC-TOE</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./js/tic.js"></script>
+</head>
+
+<body>
+    <div class="text-center">
+        <h1>TIC TAC TOE</h1>
+        <!-- Game Instructions -->
+        <p class="text-uppercase text-primary">Game starts by just Tap on
+            box<br><br>First Player starts as
+            <b>Player X</b><br>And<br>Second
+            Player as <b>Player 0</b>
+        </p>
+        <br><br>
+        <input type="text" name="" id="b1" readonly onclick="myfunc_turn1();myfunc()">
+        <input type="text" name="" id="b2" readonly onclick="myfunc_turn2();myfunc()">
+        <input type="text" name="" id="b3" readonly onclick="myfunc_turn3();myfunc()">
+        <br>
+        <input type="text" name="" id="b4" readonly onclick="myfunc_turn4();myfunc()">
+        <input type="text" name="" id="b5" readonly onclick="myfunc_turn5();myfunc()">
+        <input type="text" name="" id="b6" readonly onclick="myfunc_turn6();myfunc()">
+        <br>
+        <input type="text" name="" id="b7" readonly onclick="myfunc_turn7();myfunc()">
+        <input type="text" name="" id="b8" readonly onclick="myfunc_turn8();myfunc()">
+        <input type="text" name="" id="b9" readonly onclick="myfunc_turn9();myfunc()">
+        <br><br>
+        <button class="btn btn-primary" onclick="reset()">Reset</button>
+        <br><br>
+        <p id="result"></p>
+
+
+    </div>
+</body>
+
+</html>
