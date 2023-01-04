@@ -25,9 +25,28 @@
     <div class="container-fluid row">
         <div id="container" class=" text-center .bg-info.bg-gradient
         ">
-            <h1>Temprature of city:-</h1> <input type="text" id="result" class="form-control " readonly><br><br>
-            <h1>City:-</h1><input type="text" id="city" class="form-control mb-2" autofocus>
-            <button type="button" onclick="show()" id="btn" class="btn btn-outline-info mb-2">Show Data</button>
+            <h1>Temprature of city:-</h1> <input type="text" id="result" class="form-control form-control" readonly placeholder="City Temprature in calcius"><br><br>
+            <table class="table table-bordered table-hover table-info text-info text-uppercase tab-content">
+                <tr>
+                    <td>Condtion:-</td>
+                    <td id="con"></td>
+                </tr>
+                <tr>
+                    <td>feels_like:-</td>
+                    <td id="feels"></td>
+                </tr>
+                <tr>
+                    <td>humidity:-</td>
+                    <td id="humidity"></td>
+                </tr>
+                <tr>
+                    <td>pressure:-</td>
+                    <td id="pressure"></td>
+                </tr>
+            </table><br><br>
+            <!-- <h2><span id="con"></span></h2><br><br> -->
+            <h1>City:-</h1><input type="text" id="city" class="form-control mb-2 " autofocus placeholder="Enter City Name">
+            <button type="button" onclick="show()" id="btn" class="btn btn-outline-info mb-2 form-control">Show Data</button>
             <!-- <span>&deg;</span> -->
         </div>
     </div>
@@ -41,16 +60,37 @@
             {
                 alert("PLEASE ENTER CITY NAME");
             }
+            console.log(res);
             if(res.status==404)
             {
                 alert('not found');
             }
             let data = await res.json();
-            console.log((data.main.temp - 273.15));
+            console.log(data);
+            // console.log((data.main.temp - 273.15));
+            // console.log((data.main.feels_like - 273.15));
+            // console.log((data.main.humidity - 273.15));
+            // console.log((data.main.pressure - 273.15));
+            // console.log(data.weather[0]);
+            // console.log(data.weather[0].description);
+            let con=data.weather[0].description;
             let t = data.main.temp - 273.15;
+            let feels_like=data.main.feels_like - 273.15;
+            let humidity=data.main.humidity
+            let pressure=data.main.pressure
             t=t.toFixed(2);
-            // t = Math.round(t);
+            feels_like=feels_like.toFixed(2);
+            humidity=humidity.toFixed();
+            pressure=pressure.toFixed();
+            console.log(t);
+            console.log(feels_like);
+            console.log(humidity);
+            console.log(pressure);
             document.getElementById('result').value = t+' °C';
+            document.getElementById('con').innerHTML=con
+            document.getElementById('feels').innerHTML = feels_like+' °C';
+            document.getElementById('humidity').innerHTML = humidity+'%';
+            document.getElementById('pressure').innerHTML = pressure;
         }
         let n=document.getElementById('city');
         n.addEventListener('keyup',(e)=>{
