@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <title>Snake Game </title>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- <script src="./js/snake-js.js"></script> -->
+</head>
+
+<body>
+    <!-- <h1>Snake Game with 
+        <div class="geeks">Geeks For Geeks</div>    
+  </h1> -->
+    <canvas id="board"></canvas>
+</body>
+<script>
+    var blockSize = 25;
+    var total_row = 17;
+    var total_col = 17;
+    var context;
+    var board;
+
+    var snakeX = blockSize * 5;
+    var snakeY = blockSize * 5;
+
+    var speedX = 0;
+    var speedY = 0;
+
+    var snakeBody = [];
+    var foodX;
+    var foodY;
+    var gameOver = false;
+    window.onload = function () {
+        board = document.getElementById('board');
+        board.height = total_row * blockSize;
+        board.width = total_col * blockSize;
+        context = board.getContext('2d');
+        placeFood();
+        document.addEventListener('keyup', changeDirection);
+        // set snake speed
+        setInterval(update, 1000 / 5);
+    }
+    function update() {
+        if (gameOver) {
+            return;
+        }
+        context.fillStyle = 'aqua';
+        context.fillRect(0, 0, board.height, board.width);
+
+        context.fillStyle = 'yellow';
+        context.fillRect(foodX, foodY, blockSize, blockSize, 50);
+        context.fill();                 //  required to fill round 
+        // context.stroke();
+        context.beginPath();
+        
+        // snakeBody 
+        if (snakeX == foodX && snakeY == foodY) {
+            snakeBody.push([foodX, foodY]);
+            placeFood();
+        }
+
+        // snake body will grow
+        for (let i = snakeBody.length - 1; i > 0; i--) {
+            snakeBody[i] = snakeBody[i - 1];
+        }
+        if (snakeBody.length) {
+            snakeBody[0] = [snakeX, snakeY];
+        }
+        context.fillStyle = 'white';
+        snakeX += speedX * blockSize;
+        snakeY += speedY * blockSize;
+        context.fillRect(snakeX, snakeY, blockSize, blockSize);
+        context.fill();
+        for (let i = 0; i < snakeBody.length; i++) {
+            context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
+        }
+        if (snakeX < 0 || snakeX > total_col * blockSize || snakeY < 0 || snakeY > total_row * blockSize) {
+            gameOver = true;
+            alert('Game Over');
+        }
+
+        for (let i = 0; i < snakeBody.length; i++) {
+            if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][0]) {
+                gameOver = true;
+                alert('Game Over');
+            }
+        }
+    //     if (snakeX < 0
+	// 	|| snakeX > total_col * blockSize
+	// 	|| snakeY < 0
+	// 	|| snakeY > total_row * blockSize) {
+		
+	// 	// Out of bound condition
+	// 	gameOver = true;
+	// 	alert("Game Over");
+	// }
+
+	// for (let i = 0; i < snakeBody.length; i++) {
+	// 	if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
+			
+	// 		// Snake eats own body
+	// 		gameOver = true;
+	// 		alert("Game Over");
+	// 	}
+	// }
+        
+    }
+    /*
+    function placeFood()
+    {
+        foodX=Math.floor(Math.random()*total_row)*blockSize;
+        foodY=Math.floor(Math.random()*total_col)*blockSize;
+    }
+    */
+    // function for change direction
+    function changeDirection(e) {
+        if (e.code == "ArrowUp" && speedY != 1) {
+            // If up arrow key pressed with this condition...
+            // snake will not move in the opposite direction
+            speedX = 0;
+            speedY = -1;
+        }
+        else if (e.code == "ArrowDown" && speedY != -1) {
+            speedX = 0;
+            speedY = 1;
+        }
+        else if (e.code == "ArrowLeft" && speedX != 1) {
+            speedX = -1;
+            speedY = 0;
+        }
+        else if (e.code == "ArrowRight" && speedX != -1) {
+            speedX = 1;
+            speedY = 0;
+        }
+    }
+
+    // Randomly place food
+    function placeFood() {
+
+        // in x cordinates.
+        foodX = Math.floor(Math.random() * total_col) * blockSize;
+
+        //in y cordinates.
+        foodY = Math.floor(Math.random() * total_row) * blockSize;
+        console.log(foodX);
+        console.log(foodY);
+    }
+
+</script>
+
+</html>

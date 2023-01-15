@@ -17,7 +17,7 @@
             /* width: 50%; */
             background-color: rgb(62, 202, 155);
             margin: 0 auto;
-            
+
         }
 
         .div-f {
@@ -69,64 +69,71 @@
             <div class="gm-div">
                 <div class="div-f">
                     <div id="a">
-                        <img src="./splite-img/1.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="0" value="0">
+                        <img src="./splite-img/1.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="0" value="0">
                     </div>
                     <div id="b">
-                        <img src="./splite-img/2.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="1">
+                        <img src="./splite-img/2.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="1">
                     </div>
                     <div id="c">
-                        <img src="./splite-img/3.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="2">
+                        <img src="./splite-img/3.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="2">
                     </div>
                 </div>
                 <div class="div-f">
                     <div id="d">
-                        <img src="./splite-img/4.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="3">
+                        <img src="./splite-img/4.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="3">
                     </div>
                     <div id="e">
-                        <img src="./splite-img/5.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="4">
+                        <img src="./splite-img/5.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="4">
                     </div>
                     <div id="f">
-                        <img src="./splite-img/6.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="5">
+                        <img src="./splite-img/6.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="5">
                     </div>
                 </div>
                 <div class="div-f">
                     <div id="g">
-                        <img src="./splite-img/7.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="6">
+                        <img src="./splite-img/7.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="6">
                     </div>
                     <div id="h">
-                        <img src="./splite-img/8.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="7">
+                        <img src="./splite-img/8.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="7">
                     </div>
                     <div id="i">
-                        <img src="./splite-img/9.jpg" height="150px" width="180px" alt="" onclick="showDetails(this)"
-                            data-bid="8">
+                        <img src="./splite-img/9.jpg" height="150px" width="180px" alt="" class="img"
+                            onclick="swipe(this)" data-bid="8">
                     </div>
                 </div>
-                <button onclick="start()" class="btn btn-outline-success mt-4 w-100 btn-lg text-capitalize">Start</button>
+                <button onclick="start()"
+                    class="btn btn-outline-success mt-4 w-100 btn-lg text-capitalize">Start</button>
+            </div>
+            <div class="text-center mt-3 w-100 text-primary">
+                <h1>Moves:-</h1>
+                <h2 id="moves"></h2>
             </div>
         </div>
     </div>
     <script>
-        var img = document.getElementsByTagName('img');
-        var lenght = document.getElementsByTagName('img').length;
+        var img = document.getElementsByClassName('img');
+        var lenght = document.getElementsByClassName('img').length;
         var original_array = [];
         var ar1 = [];
         var moves = 0;
+        var gameStarted = false;
         for (let i = 0; i < lenght; i++) {
             original_array.push(img[i].src);
         }
         console.log(original_array);
         function start() {
-            // var img=document.getElementsByTagName('img');
+            // var img=document.getElementsByClassName('img');
             var n = 1;
             var s = ' ';
+            gameStarted = true;
             var obj = {
                 1: './splite-img/1.jpg',
                 2: './splite-img/2.jpg',
@@ -160,54 +167,58 @@
         var img_index2;
         var img1_src;
         var img2_src;
-        function showDetails(index) {
-            var imgs = document.getElementsByTagName('img');
-            count++;
-            if (count == 1) {
-                img_index1 = index.getAttribute("data-bid");
-                // alert("The index is  " + img_index1);
-                img1_src = imgs[img_index1].src;
-                imgs[img_index1].style.opacity = 0.5;
-                // alert(img1_src)
-            }
-            else {
-                // alert(img_index1)
-                img_index2 = index.getAttribute("data-bid");
-                // alert(img_index1)
-                // alert("The index of img is " + img_index2);
-                img2_src = imgs[img_index2].src;
-                // alert(img2_src)
-                var c = img1_src;
-                img1_src = img2_src;
-                imgs[img_index1].src = img1_src;
-                img2_src = c;
-                imgs[img_index2].src = img2_src;
-                imgs[img_index1].style.opacity = 1;
-                moves++;
-
-                count = 0;
-                check_correct();
-                function check_correct() {
-                    for (let i = 0; i < lenght; i++) {
-                        ar1.push(img[i].src);
-                    }
-                    // console.log(original_array);
-                    console.log(JSON.stringify(ar1) == JSON.stringify(original_array));
-                    // console.log(ar1);
-                    if (JSON.stringify(ar1) == JSON.stringify(original_array)) {
-                        alert('you win');
+        var result = true;
+        function swipe(index) {
+            if (gameStarted) {
+                var imgs = document.getElementsByClassName('img');
+                count++;
+                if (result) {
+                    if (count == 1) {
+                        img_index1 = index.getAttribute("data-bid");
+                        // alert("The index is  " + img_index1);
+                        img1_src = imgs[img_index1].src;
+                        imgs[img_index1].style.opacity = 0.5;
+                        // alert(img1_src)
                     }
                     else {
-                        // alert('wrong')
-                        ar1 = [];
+                        // alert(img_index1)
+                        img_index2 = index.getAttribute("data-bid");
+                        // alert(img_index1)
+                        // alert("The index of img is " + img_index2);
+                        img2_src = imgs[img_index2].src;
+                        // alert(img2_src)
+                        var c = img1_src;
+                        img1_src = img2_src;
+                        imgs[img_index1].src = img1_src;
+                        img2_src = c;
+                        imgs[img_index2].src = img2_src;
+                        imgs[img_index1].style.opacity = 1;
+                        moves++;
+                        document.getElementById('moves').innerHTML=moves;
+                        count = 0;
+                        check_correct();
                     }
                 }
             }
-
+        }
+        function check_correct() {
+            for (let i = 0; i < lenght; i++) {
+                ar1.push(img[i].src);
+            }
+            // console.log(original_array);
+            console.log(JSON.stringify(ar1) == JSON.stringify(original_array));
+            // console.log(ar1);
+            if (JSON.stringify(ar1) == JSON.stringify(original_array)) {
+                alert('you win');
+                result = false;
+            }
+            else {
+                // alert('wrong')
+                ar1 = [];
+            }
         }
         // #######################################
 
     </script>
 </body>
-
 </html>

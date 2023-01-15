@@ -1,0 +1,27 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<div id="p1" style="background-color: black;color:white;margin-top: 2px; padding: 0px; height: 20px; width:30%; float:left;">
+   slide toggle me now 
+</div>
+<div id="p2" style="background-color: black;color: aliceblue;margin-top: 2px; padding: 0px; height: 20px; width:30%; float:left;">
+up toggle me
+</div>
+<div id="p3" style="background-color: black;color: aliceblue;margin-top: 2px; padding: 0px; height: 20px; width:40%; float:left;">
+down-toggle me
+</div>
+<hr>
+<div id="data" style="background-color: black;color:white;margin-top:1px; padding: 0px;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure velit, magni beatae quidem expedita ratione fuga harum molestiae corrupti a alias. Voluptas, asperiores quis! Omnis quasi voluptates, iste veniam, incidunt explicabo quisquam laboriosam vero totam sequi nisi iusto consequatur beatae deserunt. Consequatur libero est ducimus esse cupiditate in. Doloremque quos aut molestiae, saepe dolorum ullam placeat magni. In error dicta id maiores quia minima excepturi ipsam. At praesentium, voluptas minima culpa, facere eveniet quas accusantium dolorem dolores quod, ipsa iusto reprehenderit dicta odio similique id excepturi iure consequatur quia nam architecto quisquam officiis alias illo! Tempore veritatis suscipit alias.
+</div>
+<script>
+    $(document).ready(function(){
+        $("#p1").click(function(){
+            $("#data").slideToggle(3000);
+        });
+        $('#p2').click(function(){
+            $("#data").slideUp(2000);
+        });
+        $("#p3").click(function(){
+            $("#data").slideDown(2000);
+        })
+    });
+</script>

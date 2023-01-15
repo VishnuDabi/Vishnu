@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<h1>hello we  are learning Jquery</h1>
+<h1 class="p1">hello we are learning Jquery2</h1>
+<h1 class="p1">hello we are learning Jquery3</h1>
+<h1 id="p2">hello we are learning jquery 4</h1>
+<h1>hello we are learning jquery 5</h1>
+<button id="b1">hide all h1</button>
+<button id="b2">hide all classes p1</button>
+<button id="b3">hide all id p2</button>
+<button id="b4">show all h1</button>
+<button id="b5">show all classes p1</button>
+<button id="b6">show all id p2</button>
+
+<script>
+    $(document).ready(function(){
+        $('#b1').click(function()
+        {
+            $('h1').hide(2000);
+        });
+        $("#b2").click(function()
+        {
+            $('.p1').hide(2000);
+        });
+        $('#b3').click(function(){
+            $('#p2').hide(2000);
+        });
+        $('#b4').click(function(){
+            $('h1').show(3000);
+        });
+        $('#b5').click(function(){
+            $('.p1').show(3000);
+        });
+        $('#b6').click(function(){
+            $("#p2").show(3000);
+        });
+    })
+</script>

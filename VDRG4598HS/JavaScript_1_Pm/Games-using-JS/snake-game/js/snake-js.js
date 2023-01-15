@@ -20,11 +20,12 @@ var gameOver = false;
 
 window.onload = function () {
 	// Set board height and width
+	// document.getElementById('board').getContext('2d')
 	board = document.getElementById("board");
 	board.height = total_row * blockSize;
 	board.width = total_col * blockSize;
 	context = board.getContext("2d");
-
+	// console.log(context);
 	placeFood();
 	document.addEventListener("keyup", changeDirection); //for movements
 	// Set snake speed
@@ -35,7 +36,6 @@ function update() {
 	if (gameOver) {
 		return;
 	}
-
 	// Background of a Game
 	context.fillStyle = "green";
 	context.fillRect(0, 0, board.width, board.height);
@@ -43,7 +43,6 @@ function update() {
 	// Set food color and position
 	context.fillStyle = "yellow";
 	context.fillRect(foodX, foodY, blockSize, blockSize);
-
 	if (snakeX == foodX && snakeY == foodY) {
 		snakeBody.push([foodX, foodY]);
 		placeFood();
@@ -119,4 +118,6 @@ function placeFood() {
 	
 	//in y cordinates.
 	foodY = Math.floor(Math.random() * total_row) * blockSize;
+	console.log(foodX);
+	console.log(foodY);
 }
